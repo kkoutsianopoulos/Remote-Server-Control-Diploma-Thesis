@@ -1,0 +1,50 @@
+xst -intstyle ise -ifn "/home/kkoutsianopoulos/Documents/ise_projects/ADV_Capture_1/ADV_Capture/ADV_Capture.xst" -ofn "/home/kkoutsianopoulos/Documents/ise_projects/ADV_Capture_1/ADV_Capture/ADV_Capture.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc ucf/TQG144_CONSTRAINTS.ucf -p xc6slx9-tqg144-2 ADV_Capture.ngc ADV_Capture.ngd  
+map -intstyle ise -p xc6slx9-tqg144-2 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o ADV_Capture_map.ncd ADV_Capture.ngd ADV_Capture.pcf 
+par -w -intstyle ise -ol high -mt off ADV_Capture_map.ncd ADV_Capture.ncd ADV_Capture.pcf 
+trce -intstyle ise -v 3 -s 2 -n 3 -fastpaths -xml ADV_Capture.twx ADV_Capture.ncd -o ADV_Capture.twr ADV_Capture.pcf 
+bitgen -intstyle ise -f ADV_Capture.ut ADV_Capture.ncd 
+xst -intstyle ise -ifn "/home/kkoutsianopoulos/Documents/ise_projects/ADV_Capture_1/ADV_Capture/ADV_Capture.xst" -ofn "/home/kkoutsianopoulos/Documents/ise_projects/ADV_Capture_1/ADV_Capture/ADV_Capture.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc ucf/TQG144_CONSTRAINTS.ucf -p xc6slx9-tqg144-2 ADV_Capture.ngc ADV_Capture.ngd  
+xst -intstyle ise -ifn "/home/kkoutsianopoulos/Documents/ise_projects/ADV_Capture_1/ADV_Capture/ADV_Capture.xst" -ofn "/home/kkoutsianopoulos/Documents/ise_projects/ADV_Capture_1/ADV_Capture/ADV_Capture.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc ucf/TQG144_CONSTRAINTS.ucf -p xc6slx9-tqg144-2 ADV_Capture.ngc ADV_Capture.ngd  
+map -intstyle ise -p xc6slx9-tqg144-2 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o ADV_Capture_map.ncd ADV_Capture.ngd ADV_Capture.pcf 
+par -w -intstyle ise -ol high -mt off ADV_Capture_map.ncd ADV_Capture.ncd ADV_Capture.pcf 
+trce -intstyle ise -v 3 -s 2 -n 3 -fastpaths -xml ADV_Capture.twx ADV_Capture.ncd -o ADV_Capture.twr ADV_Capture.pcf 
+bitgen -intstyle ise -f ADV_Capture.ut ADV_Capture.ncd 
+xst -intstyle ise -ifn "/home/kkoutsianopoulos/Documents/ise_projects/ADV_Capture_1/ADV_Capture/ADV_Capture.xst" -ofn "/home/kkoutsianopoulos/Documents/ise_projects/ADV_Capture_1/ADV_Capture/ADV_Capture.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc ucf/TQG144_CONSTRAINTS.ucf -p xc6slx9-tqg144-2 ADV_Capture.ngc ADV_Capture.ngd  
+map -intstyle ise -p xc6slx9-tqg144-2 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o ADV_Capture_map.ncd ADV_Capture.ngd ADV_Capture.pcf 
+par -w -intstyle ise -ol high -mt off ADV_Capture_map.ncd ADV_Capture.ncd ADV_Capture.pcf 
+trce -intstyle ise -v 3 -s 2 -n 3 -fastpaths -xml ADV_Capture.twx ADV_Capture.ncd -o ADV_Capture.twr ADV_Capture.pcf 
+bitgen -intstyle ise -f ADV_Capture.ut ADV_Capture.ncd 
+xst -intstyle ise -ifn "/home/kkoutsianopoulos/Documents/ise_projects/ADV_Capture_1/ADV_Capture/ADV_Capture.xst" -ofn "/home/kkoutsianopoulos/Documents/ise_projects/ADV_Capture_1/ADV_Capture/ADV_Capture.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc ucf/TQG144_CONSTRAINTS.ucf -p xc6slx9-tqg144-2 ADV_Capture.ngc ADV_Capture.ngd  
+map -intstyle ise -p xc6slx9-tqg144-2 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o ADV_Capture_map.ncd ADV_Capture.ngd ADV_Capture.pcf 
+par -w -intstyle ise -ol high -mt off ADV_Capture_map.ncd ADV_Capture.ncd ADV_Capture.pcf 
+trce -intstyle ise -v 3 -s 2 -n 3 -fastpaths -xml ADV_Capture.twx ADV_Capture.ncd -o ADV_Capture.twr ADV_Capture.pcf 
+bitgen -intstyle ise -f ADV_Capture.ut ADV_Capture.ncd 
+xst -intstyle ise -ifn "/home/kkoutsianopoulos/Documents/ise_projects/ADV_Capture_1/ADV_Capture/ADV_Capture.xst" -ofn "/home/kkoutsianopoulos/Documents/ise_projects/ADV_Capture_1/ADV_Capture/ADV_Capture.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc ucf/TQG144_CONSTRAINTS.ucf -p xc6slx9-tqg144-2 ADV_Capture.ngc ADV_Capture.ngd  
+map -intstyle ise -p xc6slx9-tqg144-2 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o ADV_Capture_map.ncd ADV_Capture.ngd ADV_Capture.pcf 
+par -w -intstyle ise -ol high -mt off ADV_Capture_map.ncd ADV_Capture.ncd ADV_Capture.pcf 
+trce -intstyle ise -v 3 -s 2 -n 3 -fastpaths -xml ADV_Capture.twx ADV_Capture.ncd -o ADV_Capture.twr ADV_Capture.pcf 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc ucf/TQG144_CONSTRAINTS.ucf -p xc6slx9-tqg144-2 ADV_Capture.ngc ADV_Capture.ngd  
+map -intstyle ise -p xc6slx9-tqg144-2 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o ADV_Capture_map.ncd ADV_Capture.ngd ADV_Capture.pcf 
+par -w -intstyle ise -ol high -mt off ADV_Capture_map.ncd ADV_Capture.ncd ADV_Capture.pcf 
+trce -intstyle ise -v 3 -s 2 -n 3 -fastpaths -xml ADV_Capture.twx ADV_Capture.ncd -o ADV_Capture.twr ADV_Capture.pcf 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc ucf/TQG144_CONSTRAINTS.ucf -p xc6slx9-tqg144-2 ADV_Capture.ngc ADV_Capture.ngd  
+map -intstyle ise -p xc6slx9-tqg144-2 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o ADV_Capture_map.ncd ADV_Capture.ngd ADV_Capture.pcf 
+par -w -intstyle ise -ol high -mt off ADV_Capture_map.ncd ADV_Capture.ncd ADV_Capture.pcf 
+trce -intstyle ise -v 3 -s 2 -n 3 -fastpaths -xml ADV_Capture.twx ADV_Capture.ncd -o ADV_Capture.twr ADV_Capture.pcf 
+xst -intstyle ise -ifn "/home/kkoutsianopoulos/Documents/ise_projects/ADV_Capture_1/ADV_Capture/ADV_Capture.xst" -ofn "/home/kkoutsianopoulos/Documents/ise_projects/ADV_Capture_1/ADV_Capture/ADV_Capture.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc ucf/TQG144_CONSTRAINTS.ucf -p xc6slx9-tqg144-2 ADV_Capture.ngc ADV_Capture.ngd  
+map -intstyle ise -p xc6slx9-tqg144-2 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o ADV_Capture_map.ncd ADV_Capture.ngd ADV_Capture.pcf 
+par -w -intstyle ise -ol high -mt off ADV_Capture_map.ncd ADV_Capture.ncd ADV_Capture.pcf 
+trce -intstyle ise -v 3 -s 2 -n 3 -fastpaths -xml ADV_Capture.twx ADV_Capture.ncd -o ADV_Capture.twr ADV_Capture.pcf 
+xst -intstyle ise -ifn "/home/kkoutsianopoulos/Documents/ise_projects/ADV_Capture_1/ADV_Capture/ADV_Capture.xst" -ofn "/home/kkoutsianopoulos/Documents/ise_projects/ADV_Capture_1/ADV_Capture/ADV_Capture.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc ucf/TQG144_CONSTRAINTS.ucf -p xc6slx9-tqg144-2 ADV_Capture.ngc ADV_Capture.ngd  
+map -intstyle ise -p xc6slx9-tqg144-2 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o ADV_Capture_map.ncd ADV_Capture.ngd ADV_Capture.pcf 
+par -w -intstyle ise -ol high -mt off ADV_Capture_map.ncd ADV_Capture.ncd ADV_Capture.pcf 
+trce -intstyle ise -v 3 -s 2 -n 3 -fastpaths -xml ADV_Capture.twx ADV_Capture.ncd -o ADV_Capture.twr ADV_Capture.pcf 
+bitgen -intstyle ise -f ADV_Capture.ut ADV_Capture.ncd 

@@ -1,0 +1,1333 @@
+--------------------------------------------------------------------------------
+Release 14.7 Trace  (lin64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+
+/home/kkoutsianopoulos/ISE/14.7/ISE_DS/ISE/bin/lin64/unwrapped/trce -intstyle
+ise -v 3 -s 2 -n 3 -fastpaths -xml ADV_Capture.twx ADV_Capture.ncd -o
+ADV_Capture.twr ADV_Capture.pcf
+
+Design file:              ADV_Capture.ncd
+Physical constraint file: ADV_Capture.pcf
+Device,package,speed:     xc6slx9,tqg144,C,-2 (PRODUCTION 1.23 2013-10-13)
+Report level:             verbose report
+
+Environment Variable      Effect 
+--------------------      ------ 
+NONE                      No environment variables were set
+--------------------------------------------------------------------------------
+
+INFO:Timing:3412 - To improve timing, see the Timing Closure User Guide (UG612).
+INFO:Timing:2752 - To get complete path coverage, use the unconstrained paths 
+   option. All paths that are not constrained will be reported in the 
+   unconstrained paths section(s) of the report.
+INFO:Timing:3339 - The clock-to-out numbers in this timing report are based on 
+   a 50 Ohm transmission line loading model.  For the details of this model, 
+   and for more information on accounting for different loading conditions, 
+   please see the device datasheet.
+
+================================================================================
+Timing constraint: TS_CLK_I = PERIOD TIMEGRP "CLK_I" 15.15 ns HIGH 50% 
+INPUT_JITTER 0.8 ns         PRIORITY 1;
+For more information, see Period Analysis in the Timing Closure User Guide (UG612).
+
+ 75558 paths analyzed, 6837 endpoints analyzed, 0 failing endpoints
+ 0 timing errors detected. (0 setup errors, 0 hold errors, 0 component switching limit errors)
+ Minimum period is  13.020ns.
+--------------------------------------------------------------------------------
+
+Paths for end point u2/be_1 (SLICE_X11Y61.A6), 528 paths
+--------------------------------------------------------------------------------
+Slack (setup path):     2.130ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               u2/internal_fifo_counter_2_1 (FF)
+  Destination:          u2/be_1 (FF)
+  Requirement:          15.150ns
+  Data Path Delay:      12.685ns (Levels of Logic = 4)
+  Clock Path Skew:      0.067ns (0.689 - 0.622)
+  Source Clock:         CLK_BUFG rising at 0.000ns
+  Destination Clock:    CLK_BUFG rising at 15.150ns
+  Clock Uncertainty:    0.402ns
+
+  Clock Uncertainty:          0.402ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.800ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: u2/internal_fifo_counter_2_1 to u2/be_1
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X13Y35.AQ      Tcko                  0.430   u2/internal_fifo_counter_2_3
+                                                       u2/internal_fifo_counter_2_1
+    SLICE_X13Y33.B1      net (fanout=8)        1.512   u2/internal_fifo_counter_2_1
+    SLICE_X13Y33.B       Tilo                  0.259   u2/internal_fifo_counter[5]_GND_5_o_sub_49_OUT<3>
+                                                       u2/Msub_internal_fifo_counter[5]_GND_5_o_sub_49_OUT_xor<3>11
+    SLICE_X14Y12.C4      net (fanout=22)       4.369   u2/internal_fifo_counter[5]_GND_5_o_sub_49_OUT<3>
+    SLICE_X14Y12.BMUX    Topcb                 0.431   u2/internal_fifo_counter[5]_X_4_o_wide_mux_49_OUT<27>
+                                                       u2/mux19_51
+                                                       u2/mux19_4_f7
+                                                       u2/mux19_2_f8
+    SLICE_X16Y37.C2      net (fanout=1)        2.243   u2/internal_fifo_counter[5]_X_4_o_wide_mux_49_OUT<27>
+    SLICE_X16Y37.C       Tilo                  0.255   u2/_n137073
+                                                       u2/_n137073
+    SLICE_X11Y61.A6      net (fanout=1)        2.813   u2/_n137073
+    SLICE_X11Y61.CLK     Tas                   0.373   u2/be<1>
+                                                       u2/_n137077
+                                                       u2/be_1
+    -------------------------------------------------  ---------------------------
+    Total                                     12.685ns (1.748ns logic, 10.937ns route)
+                                                       (13.8% logic, 86.2% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     2.251ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               u2/internal_fifo_counter_2_1 (FF)
+  Destination:          u2/be_1 (FF)
+  Requirement:          15.150ns
+  Data Path Delay:      12.564ns (Levels of Logic = 4)
+  Clock Path Skew:      0.067ns (0.689 - 0.622)
+  Source Clock:         CLK_BUFG rising at 0.000ns
+  Destination Clock:    CLK_BUFG rising at 15.150ns
+  Clock Uncertainty:    0.402ns
+
+  Clock Uncertainty:          0.402ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.800ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: u2/internal_fifo_counter_2_1 to u2/be_1
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X13Y35.AQ      Tcko                  0.430   u2/internal_fifo_counter_2_3
+                                                       u2/internal_fifo_counter_2_1
+    SLICE_X13Y33.B1      net (fanout=8)        1.512   u2/internal_fifo_counter_2_1
+    SLICE_X13Y33.B       Tilo                  0.259   u2/internal_fifo_counter[5]_GND_5_o_sub_49_OUT<3>
+                                                       u2/Msub_internal_fifo_counter[5]_GND_5_o_sub_49_OUT_xor<3>11
+    SLICE_X14Y12.D5      net (fanout=22)       4.249   u2/internal_fifo_counter[5]_GND_5_o_sub_49_OUT<3>
+    SLICE_X14Y12.BMUX    Topdb                 0.430   u2/internal_fifo_counter[5]_X_4_o_wide_mux_49_OUT<27>
+                                                       u2/mux19_6
+                                                       u2/mux19_4_f7
+                                                       u2/mux19_2_f8
+    SLICE_X16Y37.C2      net (fanout=1)        2.243   u2/internal_fifo_counter[5]_X_4_o_wide_mux_49_OUT<27>
+    SLICE_X16Y37.C       Tilo                  0.255   u2/_n137073
+                                                       u2/_n137073
+    SLICE_X11Y61.A6      net (fanout=1)        2.813   u2/_n137073
+    SLICE_X11Y61.CLK     Tas                   0.373   u2/be<1>
+                                                       u2/_n137077
+                                                       u2/be_1
+    -------------------------------------------------  ---------------------------
+    Total                                     12.564ns (1.747ns logic, 10.817ns route)
+                                                       (13.9% logic, 86.1% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     2.614ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               u2/internal_fifo_counter_0_14 (FF)
+  Destination:          u2/be_1 (FF)
+  Requirement:          15.150ns
+  Data Path Delay:      12.164ns (Levels of Logic = 4)
+  Clock Path Skew:      0.030ns (0.689 - 0.659)
+  Source Clock:         CLK_BUFG rising at 0.000ns
+  Destination Clock:    CLK_BUFG rising at 15.150ns
+  Clock Uncertainty:    0.402ns
+
+  Clock Uncertainty:          0.402ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.800ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: u2/internal_fifo_counter_0_14 to u2/be_1
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X7Y35.BQ       Tcko                  0.430   u2/internal_fifo_counter_0_16
+                                                       u2/internal_fifo_counter_0_14
+    SLICE_X14Y7.B3       net (fanout=23)       4.407   u2/internal_fifo_counter_0_14
+    SLICE_X14Y7.B        Tilo                  0.235   u2/mux19_10
+                                                       u2/mux19_10
+    SLICE_X14Y12.C1      net (fanout=1)        0.977   u2/mux19_10
+    SLICE_X14Y12.BMUX    Topcb                 0.431   u2/internal_fifo_counter[5]_X_4_o_wide_mux_49_OUT<27>
+                                                       u2/mux19_51
+                                                       u2/mux19_4_f7
+                                                       u2/mux19_2_f8
+    SLICE_X16Y37.C2      net (fanout=1)        2.243   u2/internal_fifo_counter[5]_X_4_o_wide_mux_49_OUT<27>
+    SLICE_X16Y37.C       Tilo                  0.255   u2/_n137073
+                                                       u2/_n137073
+    SLICE_X11Y61.A6      net (fanout=1)        2.813   u2/_n137073
+    SLICE_X11Y61.CLK     Tas                   0.373   u2/be<1>
+                                                       u2/_n137077
+                                                       u2/be_1
+    -------------------------------------------------  ---------------------------
+    Total                                     12.164ns (1.724ns logic, 10.440ns route)
+                                                       (14.2% logic, 85.8% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point u2/be_1 (SLICE_X11Y61.A2), 528 paths
+--------------------------------------------------------------------------------
+Slack (setup path):     2.643ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               u2/internal_fifo_counter_1_7 (FF)
+  Destination:          u2/be_1 (FF)
+  Requirement:          15.150ns
+  Data Path Delay:      12.146ns (Levels of Logic = 4)
+  Clock Path Skew:      0.041ns (0.689 - 0.648)
+  Source Clock:         CLK_BUFG rising at 0.000ns
+  Destination Clock:    CLK_BUFG rising at 15.150ns
+  Clock Uncertainty:    0.402ns
+
+  Clock Uncertainty:          0.402ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.800ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: u2/internal_fifo_counter_1_7 to u2/be_1
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X10Y36.CQ      Tcko                  0.476   u2/internal_fifo_counter_1_8
+                                                       u2/internal_fifo_counter_1_7
+    SLICE_X17Y14.B4      net (fanout=16)       3.133   u2/internal_fifo_counter_1_7
+    SLICE_X17Y14.B       Tilo                  0.259   u2/mux22_101
+                                                       u2/mux22_101
+    SLICE_X12Y41.C4      net (fanout=1)        2.262   u2/mux22_101
+    SLICE_X12Y41.BMUX    Topcb                 0.455   u2/internal_fifo_counter[5]_X_4_o_wide_mux_49_OUT<2>
+                                                       u2/mux22_51
+                                                       u2/mux22_4_f7
+                                                       u2/mux22_2_f8
+    SLICE_X9Y26.A5       net (fanout=1)        1.649   u2/internal_fifo_counter[5]_X_4_o_wide_mux_49_OUT<2>
+    SLICE_X9Y26.A        Tilo                  0.259   u2/_n137075
+                                                       u2/_n137075
+    SLICE_X11Y61.A2      net (fanout=1)        3.280   u2/_n137075
+    SLICE_X11Y61.CLK     Tas                   0.373   u2/be<1>
+                                                       u2/_n137077
+                                                       u2/be_1
+    -------------------------------------------------  ---------------------------
+    Total                                     12.146ns (1.822ns logic, 10.324ns route)
+                                                       (15.0% logic, 85.0% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     2.906ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               u2/internal_fifo_counter_0_15 (FF)
+  Destination:          u2/be_1 (FF)
+  Requirement:          15.150ns
+  Data Path Delay:      11.872ns (Levels of Logic = 4)
+  Clock Path Skew:      0.030ns (0.689 - 0.659)
+  Source Clock:         CLK_BUFG rising at 0.000ns
+  Destination Clock:    CLK_BUFG rising at 15.150ns
+  Clock Uncertainty:    0.402ns
+
+  Clock Uncertainty:          0.402ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.800ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: u2/internal_fifo_counter_0_15 to u2/be_1
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X7Y35.CQ       Tcko                  0.430   u2/internal_fifo_counter_0_16
+                                                       u2/internal_fifo_counter_0_15
+    SLICE_X17Y14.B3      net (fanout=21)       2.905   u2/internal_fifo_counter_0_15
+    SLICE_X17Y14.B       Tilo                  0.259   u2/mux22_101
+                                                       u2/mux22_101
+    SLICE_X12Y41.C4      net (fanout=1)        2.262   u2/mux22_101
+    SLICE_X12Y41.BMUX    Topcb                 0.455   u2/internal_fifo_counter[5]_X_4_o_wide_mux_49_OUT<2>
+                                                       u2/mux22_51
+                                                       u2/mux22_4_f7
+                                                       u2/mux22_2_f8
+    SLICE_X9Y26.A5       net (fanout=1)        1.649   u2/internal_fifo_counter[5]_X_4_o_wide_mux_49_OUT<2>
+    SLICE_X9Y26.A        Tilo                  0.259   u2/_n137075
+                                                       u2/_n137075
+    SLICE_X11Y61.A2      net (fanout=1)        3.280   u2/_n137075
+    SLICE_X11Y61.CLK     Tas                   0.373   u2/be<1>
+                                                       u2/_n137077
+                                                       u2/be_1
+    -------------------------------------------------  ---------------------------
+    Total                                     11.872ns (1.776ns logic, 10.096ns route)
+                                                       (15.0% logic, 85.0% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     3.346ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               u2/internal_fifo_counter_2_1 (FF)
+  Destination:          u2/be_1 (FF)
+  Requirement:          15.150ns
+  Data Path Delay:      11.469ns (Levels of Logic = 4)
+  Clock Path Skew:      0.067ns (0.689 - 0.622)
+  Source Clock:         CLK_BUFG rising at 0.000ns
+  Destination Clock:    CLK_BUFG rising at 15.150ns
+  Clock Uncertainty:    0.402ns
+
+  Clock Uncertainty:          0.402ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.800ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: u2/internal_fifo_counter_2_1 to u2/be_1
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X13Y35.AQ      Tcko                  0.430   u2/internal_fifo_counter_2_3
+                                                       u2/internal_fifo_counter_2_1
+    SLICE_X13Y33.B1      net (fanout=8)        1.512   u2/internal_fifo_counter_2_1
+    SLICE_X13Y33.B       Tilo                  0.259   u2/internal_fifo_counter[5]_GND_5_o_sub_49_OUT<3>
+                                                       u2/Msub_internal_fifo_counter[5]_GND_5_o_sub_49_OUT_xor<3>11
+    SLICE_X8Y20.C1       net (fanout=22)       3.063   u2/internal_fifo_counter[5]_GND_5_o_sub_49_OUT<3>
+    SLICE_X8Y20.BMUX     Topcb                 0.455   u2/internal_fifo_counter[5]_X_4_o_wide_mux_49_OUT<30>
+                                                       u2/mux23_51
+                                                       u2/mux23_4_f7
+                                                       u2/mux23_2_f8
+    SLICE_X9Y26.A1       net (fanout=1)        1.838   u2/internal_fifo_counter[5]_X_4_o_wide_mux_49_OUT<30>
+    SLICE_X9Y26.A        Tilo                  0.259   u2/_n137075
+                                                       u2/_n137075
+    SLICE_X11Y61.A2      net (fanout=1)        3.280   u2/_n137075
+    SLICE_X11Y61.CLK     Tas                   0.373   u2/be<1>
+                                                       u2/_n137077
+                                                       u2/be_1
+    -------------------------------------------------  ---------------------------
+    Total                                     11.469ns (1.776ns logic, 9.693ns route)
+                                                       (15.5% logic, 84.5% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point u2/be_1 (SLICE_X11Y61.A3), 176 paths
+--------------------------------------------------------------------------------
+Slack (setup path):     3.211ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               u2/internal_fifo_counter_0_2 (FF)
+  Destination:          u2/be_1 (FF)
+  Requirement:          15.150ns
+  Data Path Delay:      11.600ns (Levels of Logic = 4)
+  Clock Path Skew:      0.063ns (0.689 - 0.626)
+  Source Clock:         CLK_BUFG rising at 0.000ns
+  Destination Clock:    CLK_BUFG rising at 15.150ns
+  Clock Uncertainty:    0.402ns
+
+  Clock Uncertainty:          0.402ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.800ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: u2/internal_fifo_counter_0_2 to u2/be_1
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X12Y32.BQ      Tcko                  0.525   u2/internal_fifo_counter_0_4
+                                                       u2/internal_fifo_counter_0_2
+    SLICE_X8Y43.D2       net (fanout=16)       2.257   u2/internal_fifo_counter_0_2
+    SLICE_X8Y43.D        Tilo                  0.254   u2/mux28_111
+                                                       u2/mux28_111
+    SLICE_X16Y18.D3      net (fanout=1)        2.463   u2/mux28_111
+    SLICE_X16Y18.BMUX    Topdb                 0.481   u2/internal_fifo_counter[5]_X_4_o_wide_mux_49_OUT<6>
+                                                       u2/mux28_6
+                                                       u2/mux28_4_f7
+                                                       u2/mux28_2_f8
+    SLICE_X14Y32.C4      net (fanout=1)        1.599   u2/internal_fifo_counter[5]_X_4_o_wide_mux_49_OUT<6>
+    SLICE_X14Y32.C       Tilo                  0.235   u2/_n137076
+                                                       u2/_n137076
+    SLICE_X11Y61.A3      net (fanout=1)        3.413   u2/_n137076
+    SLICE_X11Y61.CLK     Tas                   0.373   u2/be<1>
+                                                       u2/_n137077
+                                                       u2/be_1
+    -------------------------------------------------  ---------------------------
+    Total                                     11.600ns (1.868ns logic, 9.732ns route)
+                                                       (16.1% logic, 83.9% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     3.645ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               u2/internal_fifo_counter_1_2 (FF)
+  Destination:          u2/be_1 (FF)
+  Requirement:          15.150ns
+  Data Path Delay:      11.167ns (Levels of Logic = 4)
+  Clock Path Skew:      0.064ns (0.689 - 0.625)
+  Source Clock:         CLK_BUFG rising at 0.000ns
+  Destination Clock:    CLK_BUFG rising at 15.150ns
+  Clock Uncertainty:    0.402ns
+
+  Clock Uncertainty:          0.402ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.800ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: u2/internal_fifo_counter_1_2 to u2/be_1
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X12Y33.BQ      Tcko                  0.525   u2/internal_fifo_counter_1_4
+                                                       u2/internal_fifo_counter_1_2
+    SLICE_X8Y43.D4       net (fanout=19)       1.824   u2/internal_fifo_counter_1_2
+    SLICE_X8Y43.D        Tilo                  0.254   u2/mux28_111
+                                                       u2/mux28_111
+    SLICE_X16Y18.D3      net (fanout=1)        2.463   u2/mux28_111
+    SLICE_X16Y18.BMUX    Topdb                 0.481   u2/internal_fifo_counter[5]_X_4_o_wide_mux_49_OUT<6>
+                                                       u2/mux28_6
+                                                       u2/mux28_4_f7
+                                                       u2/mux28_2_f8
+    SLICE_X14Y32.C4      net (fanout=1)        1.599   u2/internal_fifo_counter[5]_X_4_o_wide_mux_49_OUT<6>
+    SLICE_X14Y32.C       Tilo                  0.235   u2/_n137076
+                                                       u2/_n137076
+    SLICE_X11Y61.A3      net (fanout=1)        3.413   u2/_n137076
+    SLICE_X11Y61.CLK     Tas                   0.373   u2/be<1>
+                                                       u2/_n137077
+                                                       u2/be_1
+    -------------------------------------------------  ---------------------------
+    Total                                     11.167ns (1.868ns logic, 9.299ns route)
+                                                       (16.7% logic, 83.3% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     4.087ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               u2/internal_fifo_counter_1_3 (FF)
+  Destination:          u2/be_1 (FF)
+  Requirement:          15.150ns
+  Data Path Delay:      10.725ns (Levels of Logic = 4)
+  Clock Path Skew:      0.064ns (0.689 - 0.625)
+  Source Clock:         CLK_BUFG rising at 0.000ns
+  Destination Clock:    CLK_BUFG rising at 15.150ns
+  Clock Uncertainty:    0.402ns
+
+  Clock Uncertainty:          0.402ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.800ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: u2/internal_fifo_counter_1_3 to u2/be_1
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X12Y33.CQ      Tcko                  0.525   u2/internal_fifo_counter_1_4
+                                                       u2/internal_fifo_counter_1_3
+    SLICE_X3Y24.B4       net (fanout=17)       2.043   u2/internal_fifo_counter_1_3
+    SLICE_X3Y24.B        Tilo                  0.259   u2/mux28_102
+                                                       u2/mux28_102
+    SLICE_X16Y18.D6      net (fanout=1)        1.797   u2/mux28_102
+    SLICE_X16Y18.BMUX    Topdb                 0.481   u2/internal_fifo_counter[5]_X_4_o_wide_mux_49_OUT<6>
+                                                       u2/mux28_6
+                                                       u2/mux28_4_f7
+                                                       u2/mux28_2_f8
+    SLICE_X14Y32.C4      net (fanout=1)        1.599   u2/internal_fifo_counter[5]_X_4_o_wide_mux_49_OUT<6>
+    SLICE_X14Y32.C       Tilo                  0.235   u2/_n137076
+                                                       u2/_n137076
+    SLICE_X11Y61.A3      net (fanout=1)        3.413   u2/_n137076
+    SLICE_X11Y61.CLK     Tas                   0.373   u2/be<1>
+                                                       u2/_n137077
+                                                       u2/be_1
+    -------------------------------------------------  ---------------------------
+    Total                                     10.725ns (1.873ns logic, 8.852ns route)
+                                                       (17.5% logic, 82.5% route)
+
+--------------------------------------------------------------------------------
+
+Hold Paths: TS_CLK_I = PERIOD TIMEGRP "CLK_I" 15.15 ns HIGH 50% INPUT_JITTER 0.8 ns
+        PRIORITY 1;
+--------------------------------------------------------------------------------
+
+Paths for end point u2/counter_2_10 (SLICE_X22Y30.C5), 1 path
+--------------------------------------------------------------------------------
+Slack (hold path):      0.390ns (requirement - (clock path skew + uncertainty - data path))
+  Source:               u2/counter_1_10 (FF)
+  Destination:          u2/counter_2_10 (FF)
+  Requirement:          0.000ns
+  Data Path Delay:      0.390ns (Levels of Logic = 1)
+  Clock Path Skew:      0.000ns
+  Source Clock:         CLK_BUFG rising at 15.150ns
+  Destination Clock:    CLK_BUFG rising at 15.150ns
+  Clock Uncertainty:    0.000ns
+
+  Minimum Data Path at Fast Process Corner: u2/counter_1_10 to u2/counter_2_10
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X22Y30.CQ      Tcko                  0.200   u2/counter_1<11>
+                                                       u2/counter_1_10
+    SLICE_X22Y30.C5      net (fanout=2)        0.069   u2/counter_1<10>
+    SLICE_X22Y30.CLK     Tah         (-Th)    -0.121   u2/counter_1<11>
+                                                       u2/counter_1<10>_rt
+                                                       u2/counter_2_10
+    -------------------------------------------------  ---------------------------
+    Total                                      0.390ns (0.321ns logic, 0.069ns route)
+                                                       (82.3% logic, 17.7% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point u2/counter_2_9 (SLICE_X22Y30.B5), 1 path
+--------------------------------------------------------------------------------
+Slack (hold path):      0.397ns (requirement - (clock path skew + uncertainty - data path))
+  Source:               u2/counter_1_9 (FF)
+  Destination:          u2/counter_2_9 (FF)
+  Requirement:          0.000ns
+  Data Path Delay:      0.397ns (Levels of Logic = 1)
+  Clock Path Skew:      0.000ns
+  Source Clock:         CLK_BUFG rising at 15.150ns
+  Destination Clock:    CLK_BUFG rising at 15.150ns
+  Clock Uncertainty:    0.000ns
+
+  Minimum Data Path at Fast Process Corner: u2/counter_1_9 to u2/counter_2_9
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X22Y30.BQ      Tcko                  0.200   u2/counter_1<11>
+                                                       u2/counter_1_9
+    SLICE_X22Y30.B5      net (fanout=2)        0.076   u2/counter_1<9>
+    SLICE_X22Y30.CLK     Tah         (-Th)    -0.121   u2/counter_1<11>
+                                                       u2/counter_1<9>_rt
+                                                       u2/counter_2_9
+    -------------------------------------------------  ---------------------------
+    Total                                      0.397ns (0.321ns logic, 0.076ns route)
+                                                       (80.9% logic, 19.1% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point u2/counter_2_2 (SLICE_X23Y30.C5), 1 path
+--------------------------------------------------------------------------------
+Slack (hold path):      0.411ns (requirement - (clock path skew + uncertainty - data path))
+  Source:               u2/counter_1_2 (FF)
+  Destination:          u2/counter_2_2 (FF)
+  Requirement:          0.000ns
+  Data Path Delay:      0.411ns (Levels of Logic = 1)
+  Clock Path Skew:      0.000ns
+  Source Clock:         CLK_BUFG rising at 15.150ns
+  Destination Clock:    CLK_BUFG rising at 15.150ns
+  Clock Uncertainty:    0.000ns
+
+  Minimum Data Path at Fast Process Corner: u2/counter_1_2 to u2/counter_2_2
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X23Y30.CQ      Tcko                  0.198   u2/counter_1<3>
+                                                       u2/counter_1_2
+    SLICE_X23Y30.C5      net (fanout=2)        0.058   u2/counter_1<2>
+    SLICE_X23Y30.CLK     Tah         (-Th)    -0.155   u2/counter_1<3>
+                                                       u2/counter_1<2>_rt
+                                                       u2/counter_2_2
+    -------------------------------------------------  ---------------------------
+    Total                                      0.411ns (0.353ns logic, 0.058ns route)
+                                                       (85.9% logic, 14.1% route)
+
+--------------------------------------------------------------------------------
+
+Component Switching Limit Checks: TS_CLK_I = PERIOD TIMEGRP "CLK_I" 15.15 ns HIGH 50% INPUT_JITTER 0.8 ns
+        PRIORITY 1;
+--------------------------------------------------------------------------------
+Slack: 12.484ns (period - min period limit)
+  Period: 15.150ns
+  Min period limit: 2.666ns (375.094MHz) (Tbcper_I)
+  Physical resource: CLK_BUFG/I0
+  Logical resource: CLK_BUFG/I0
+  Location pin: BUFGMUX_X2Y2.I0
+  Clock network: CLK
+--------------------------------------------------------------------------------
+Slack: 14.670ns (period - min period limit)
+  Period: 15.150ns
+  Min period limit: 0.480ns (2083.333MHz) (Tcp)
+  Physical resource: u2/internal_fifo_1116/CLK
+  Logical resource: u2/internal_fifo_1119/CK
+  Location pin: SLICE_X0Y20.CLK
+  Clock network: CLK_BUFG
+--------------------------------------------------------------------------------
+Slack: 14.670ns (period - min period limit)
+  Period: 15.150ns
+  Min period limit: 0.480ns (2083.333MHz) (Tcp)
+  Physical resource: u2/internal_fifo_1116/CLK
+  Logical resource: u2/internal_fifo_1116/CK
+  Location pin: SLICE_X0Y20.CLK
+  Clock network: CLK_BUFG
+--------------------------------------------------------------------------------
+
+================================================================================
+Timing constraint: TIMEGRP "M_FIFO_I" OFFSET = IN 8.57 ns VALID 9.07 ns BEFORE 
+COMP "CLK_I"         "RISING";
+For more information, see Offset In Analysis in the Timing Closure User Guide (UG612).
+
+ 370 paths analyzed, 370 endpoints analyzed, 0 failing endpoints
+ 0 timing errors detected. (0 setup errors, 0 hold errors)
+ Minimum allowable offset is   8.227ns.
+--------------------------------------------------------------------------------
+
+Paths for end point u2/internal_fifo_1_26 (SLICE_X7Y49.C4), 1 path
+--------------------------------------------------------------------------------
+Slack (setup path):     0.343ns (requirement - (data path - clock path - clock arrival + uncertainty))
+  Source:               txe_n (PAD)
+  Destination:          u2/internal_fifo_1_26 (FF)
+  Destination Clock:    CLK_BUFG rising at 0.000ns
+  Requirement:          8.570ns
+  Data Path Delay:      14.944ns (Levels of Logic = 3)
+  Clock Path Delay:     7.118ns (Levels of Logic = 2)
+  Clock Uncertainty:    0.401ns
+
+  Clock Uncertainty:          0.401ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.050ns
+    Total Input Jitter (TIJ):   0.800ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: txe_n to u2/internal_fifo_1_26
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    P127.I               Tiopi                 1.557   txe_n
+                                                       txe_n
+                                                       txe_n_IBUF
+                                                       ProtoComp65.IMUX.4
+    SLICE_X8Y48.C6       net (fanout=165)     11.951   txe_n_IBUF
+    SLICE_X8Y48.C        Tilo                  0.255   N197
+                                                       u2/internal_fifo_1_26_rstpot_SW0
+    SLICE_X7Y49.C4       net (fanout=1)        0.808   N197
+    SLICE_X7Y49.CLK      Tas                   0.373   u2/internal_fifo_1_27
+                                                       u2/internal_fifo_1_26_rstpot
+                                                       u2/internal_fifo_1_26
+    -------------------------------------------------  ---------------------------
+    Total                                     14.944ns (2.185ns logic, 12.759ns route)
+                                                       (14.6% logic, 85.4% route)
+
+  Minimum Clock Path at Slow Process Corner: CLK_I to u2/internal_fifo_1_26
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    P12.I                Tiopi                 1.344   CLK_I
+                                                       CLK_I
+                                                       IBUFG_inst
+                                                       ProtoComp67.IMUX
+    BUFGMUX_X2Y2.I0      net (fanout=1)        4.658   CLK
+    BUFGMUX_X2Y2.O       Tgi0o                 0.197   CLK_BUFG
+                                                       CLK_BUFG
+    SLICE_X7Y49.CLK      net (fanout=518)      0.919   CLK_BUFG
+    -------------------------------------------------  ---------------------------
+    Total                                      7.118ns (1.541ns logic, 5.577ns route)
+                                                       (21.6% logic, 78.4% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point u2/internal_fifo_4_27 (SLICE_X9Y46.D3), 1 path
+--------------------------------------------------------------------------------
+Slack (setup path):     0.370ns (requirement - (data path - clock path - clock arrival + uncertainty))
+  Source:               txe_n (PAD)
+  Destination:          u2/internal_fifo_4_27 (FF)
+  Destination Clock:    CLK_BUFG rising at 0.000ns
+  Requirement:          8.570ns
+  Data Path Delay:      14.846ns (Levels of Logic = 3)
+  Clock Path Delay:     7.047ns (Levels of Logic = 2)
+  Clock Uncertainty:    0.401ns
+
+  Clock Uncertainty:          0.401ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.050ns
+    Total Input Jitter (TIJ):   0.800ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: txe_n to u2/internal_fifo_4_27
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    P127.I               Tiopi                 1.557   txe_n
+                                                       txe_n
+                                                       txe_n_IBUF
+                                                       ProtoComp65.IMUX.4
+    SLICE_X8Y46.B3       net (fanout=165)     11.519   txe_n_IBUF
+    SLICE_X8Y46.BMUX     Tilo                  0.326   N257
+                                                       u2/_n7191_inv321_SW7
+    SLICE_X9Y46.D3       net (fanout=1)        1.071   N519
+    SLICE_X9Y46.CLK      Tas                   0.373   u2/internal_fifo_4_27
+                                                       u2/internal_fifo_4_27_rstpot
+                                                       u2/internal_fifo_4_27
+    -------------------------------------------------  ---------------------------
+    Total                                     14.846ns (2.256ns logic, 12.590ns route)
+                                                       (15.2% logic, 84.8% route)
+
+  Minimum Clock Path at Slow Process Corner: CLK_I to u2/internal_fifo_4_27
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    P12.I                Tiopi                 1.344   CLK_I
+                                                       CLK_I
+                                                       IBUFG_inst
+                                                       ProtoComp67.IMUX
+    BUFGMUX_X2Y2.I0      net (fanout=1)        4.658   CLK
+    BUFGMUX_X2Y2.O       Tgi0o                 0.197   CLK_BUFG
+                                                       CLK_BUFG
+    SLICE_X9Y46.CLK      net (fanout=518)      0.848   CLK_BUFG
+    -------------------------------------------------  ---------------------------
+    Total                                      7.047ns (1.541ns logic, 5.506ns route)
+                                                       (21.9% logic, 78.1% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point u2/internal_fifo_3_26 (SLICE_X8Y47.C3), 1 path
+--------------------------------------------------------------------------------
+Slack (setup path):     0.457ns (requirement - (data path - clock path - clock arrival + uncertainty))
+  Source:               txe_n (PAD)
+  Destination:          u2/internal_fifo_3_26 (FF)
+  Destination Clock:    CLK_BUFG rising at 0.000ns
+  Requirement:          8.570ns
+  Data Path Delay:      14.760ns (Levels of Logic = 3)
+  Clock Path Delay:     7.048ns (Levels of Logic = 2)
+  Clock Uncertainty:    0.401ns
+
+  Clock Uncertainty:          0.401ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.050ns
+    Total Input Jitter (TIJ):   0.800ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: txe_n to u2/internal_fifo_3_26
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    P127.I               Tiopi                 1.557   txe_n
+                                                       txe_n
+                                                       txe_n_IBUF
+                                                       ProtoComp65.IMUX.4
+    SLICE_X8Y46.A3       net (fanout=165)     12.048   txe_n_IBUF
+    SLICE_X8Y46.A        Tilo                  0.254   N257
+                                                       u2/internal_fifo_3_26_rstpot_SW0
+    SLICE_X8Y47.C3       net (fanout=1)        0.562   N263
+    SLICE_X8Y47.CLK      Tas                   0.339   u2/internal_fifo_3_27
+                                                       u2/internal_fifo_3_26_rstpot
+                                                       u2/internal_fifo_3_26
+    -------------------------------------------------  ---------------------------
+    Total                                     14.760ns (2.150ns logic, 12.610ns route)
+                                                       (14.6% logic, 85.4% route)
+
+  Minimum Clock Path at Slow Process Corner: CLK_I to u2/internal_fifo_3_26
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    P12.I                Tiopi                 1.344   CLK_I
+                                                       CLK_I
+                                                       IBUFG_inst
+                                                       ProtoComp67.IMUX
+    BUFGMUX_X2Y2.I0      net (fanout=1)        4.658   CLK
+    BUFGMUX_X2Y2.O       Tgi0o                 0.197   CLK_BUFG
+                                                       CLK_BUFG
+    SLICE_X8Y47.CLK      net (fanout=518)      0.849   CLK_BUFG
+    -------------------------------------------------  ---------------------------
+    Total                                      7.048ns (1.541ns logic, 5.507ns route)
+                                                       (21.9% logic, 78.1% route)
+
+--------------------------------------------------------------------------------
+
+Hold Paths: TIMEGRP "M_FIFO_I" OFFSET = IN 8.57 ns VALID 9.07 ns BEFORE COMP "CLK_I"
+        "RISING";
+--------------------------------------------------------------------------------
+
+Paths for end point u2/internal_fifo_2_6 (SLICE_X2Y23.C4), 1 path
+--------------------------------------------------------------------------------
+Slack (hold path):      0.076ns (requirement - (clock path + clock arrival + uncertainty - data path))
+  Source:               txe_n (PAD)
+  Destination:          u2/internal_fifo_2_6 (FF)
+  Destination Clock:    CLK_BUFG rising at 0.000ns
+  Requirement:          0.500ns
+  Data Path Delay:      8.106ns (Levels of Logic = 3)
+  Clock Path Delay:     8.129ns (Levels of Logic = 2)
+  Clock Uncertainty:    0.401ns
+
+  Clock Uncertainty:          0.401ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.050ns
+    Total Input Jitter (TIJ):   0.800ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Minimum Data Path at Slow Process Corner: txe_n to u2/internal_fifo_2_6
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    P127.I               Tiopi                 1.344   txe_n
+                                                       txe_n
+                                                       txe_n_IBUF
+                                                       ProtoComp65.IMUX.4
+    SLICE_X1Y24.B3       net (fanout=165)      5.790   txe_n_IBUF
+    SLICE_X1Y24.B        Tilo                  0.244   N69
+                                                       u2/_n7767_inv321_SW7
+    SLICE_X2Y23.C4       net (fanout=1)        0.599   N69
+    SLICE_X2Y23.CLK      Tah         (-Th)    -0.129   u2/internal_fifo_2_7
+                                                       u2/internal_fifo_2_6_rstpot
+                                                       u2/internal_fifo_2_6
+    -------------------------------------------------  ---------------------------
+    Total                                      8.106ns (1.717ns logic, 6.389ns route)
+                                                       (21.2% logic, 78.8% route)
+
+  Maximum Clock Path at Slow Process Corner: CLK_I to u2/internal_fifo_2_6
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    P12.I                Tiopi                 1.557   CLK_I
+                                                       CLK_I
+                                                       IBUFG_inst
+                                                       ProtoComp67.IMUX
+    BUFGMUX_X2Y2.I0      net (fanout=1)        4.927   CLK
+    BUFGMUX_X2Y2.O       Tgi0o                 0.209   CLK_BUFG
+                                                       CLK_BUFG
+    SLICE_X2Y23.CLK      net (fanout=518)      1.436   CLK_BUFG
+    -------------------------------------------------  ---------------------------
+    Total                                      8.129ns (1.766ns logic, 6.363ns route)
+                                                       (21.7% logic, 78.3% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point u2/internal_fifo_2_7 (SLICE_X2Y23.D3), 1 path
+--------------------------------------------------------------------------------
+Slack (hold path):      0.093ns (requirement - (clock path + clock arrival + uncertainty - data path))
+  Source:               txe_n (PAD)
+  Destination:          u2/internal_fifo_2_7 (FF)
+  Destination Clock:    CLK_BUFG rising at 0.000ns
+  Requirement:          0.500ns
+  Data Path Delay:      8.123ns (Levels of Logic = 3)
+  Clock Path Delay:     8.129ns (Levels of Logic = 2)
+  Clock Uncertainty:    0.401ns
+
+  Clock Uncertainty:          0.401ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.050ns
+    Total Input Jitter (TIJ):   0.800ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Minimum Data Path at Slow Process Corner: txe_n to u2/internal_fifo_2_7
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    P127.I               Tiopi                 1.344   txe_n
+                                                       txe_n
+                                                       txe_n_IBUF
+                                                       ProtoComp65.IMUX.4
+    SLICE_X2Y22.A2       net (fanout=165)      5.932   txe_n_IBUF
+    SLICE_X2Y22.A        Tilo                  0.222   N75
+                                                       u2/_n7767_inv321_SW10
+    SLICE_X2Y23.D3       net (fanout=1)        0.496   N75
+    SLICE_X2Y23.CLK      Tah         (-Th)    -0.129   u2/internal_fifo_2_7
+                                                       u2/internal_fifo_2_7_rstpot
+                                                       u2/internal_fifo_2_7
+    -------------------------------------------------  ---------------------------
+    Total                                      8.123ns (1.695ns logic, 6.428ns route)
+                                                       (20.9% logic, 79.1% route)
+
+  Maximum Clock Path at Slow Process Corner: CLK_I to u2/internal_fifo_2_7
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    P12.I                Tiopi                 1.557   CLK_I
+                                                       CLK_I
+                                                       IBUFG_inst
+                                                       ProtoComp67.IMUX
+    BUFGMUX_X2Y2.I0      net (fanout=1)        4.927   CLK
+    BUFGMUX_X2Y2.O       Tgi0o                 0.209   CLK_BUFG
+                                                       CLK_BUFG
+    SLICE_X2Y23.CLK      net (fanout=518)      1.436   CLK_BUFG
+    -------------------------------------------------  ---------------------------
+    Total                                      8.129ns (1.766ns logic, 6.363ns route)
+                                                       (21.7% logic, 78.3% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point u2/internal_fifo_1_6 (SLICE_X1Y23.C4), 1 path
+--------------------------------------------------------------------------------
+Slack (hold path):      0.220ns (requirement - (clock path + clock arrival + uncertainty - data path))
+  Source:               txe_n (PAD)
+  Destination:          u2/internal_fifo_1_6 (FF)
+  Destination Clock:    CLK_BUFG rising at 0.000ns
+  Requirement:          0.500ns
+  Data Path Delay:      8.250ns (Levels of Logic = 3)
+  Clock Path Delay:     8.129ns (Levels of Logic = 2)
+  Clock Uncertainty:    0.401ns
+
+  Clock Uncertainty:          0.401ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.050ns
+    Total Input Jitter (TIJ):   0.800ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Minimum Data Path at Slow Process Corner: txe_n to u2/internal_fifo_1_6
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    P127.I               Tiopi                 1.344   txe_n
+                                                       txe_n
+                                                       txe_n_IBUF
+                                                       ProtoComp65.IMUX.4
+    SLICE_X1Y24.B3       net (fanout=165)      5.790   txe_n_IBUF
+    SLICE_X1Y24.BMUX     Tilo                  0.317   N69
+                                                       u2/internal_fifo_1_6_rstpot_SW0
+    SLICE_X1Y23.C4       net (fanout=1)        0.509   N157
+    SLICE_X1Y23.CLK      Tah         (-Th)    -0.290   u2/internal_fifo_1_7
+                                                       u2/internal_fifo_1_6_rstpot
+                                                       u2/internal_fifo_1_6
+    -------------------------------------------------  ---------------------------
+    Total                                      8.250ns (1.951ns logic, 6.299ns route)
+                                                       (23.6% logic, 76.4% route)
+
+  Maximum Clock Path at Slow Process Corner: CLK_I to u2/internal_fifo_1_6
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    P12.I                Tiopi                 1.557   CLK_I
+                                                       CLK_I
+                                                       IBUFG_inst
+                                                       ProtoComp67.IMUX
+    BUFGMUX_X2Y2.I0      net (fanout=1)        4.927   CLK
+    BUFGMUX_X2Y2.O       Tgi0o                 0.209   CLK_BUFG
+                                                       CLK_BUFG
+    SLICE_X1Y23.CLK      net (fanout=518)      1.436   CLK_BUFG
+    -------------------------------------------------  ---------------------------
+    Total                                      8.129ns (1.766ns logic, 6.363ns route)
+                                                       (21.7% logic, 78.3% route)
+
+--------------------------------------------------------------------------------
+
+================================================================================
+Timing constraint: TIMEGRP "M_FIFO_O" OFFSET = OUT 14.15 ns VALID 8.37 ns AFTER 
+COMP "CLK_I"         "RISING";
+For more information, see Offset Out Analysis in the Timing Closure User Guide (UG612).
+
+ 36 paths analyzed, 36 endpoints analyzed, 0 failing endpoints
+ 0 timing errors detected.
+ Minimum allowable offset is  14.139ns.
+--------------------------------------------------------------------------------
+
+Paths for end point data<2> (P33.PAD), 1 path
+--------------------------------------------------------------------------------
+Slack (slowest paths):  0.011ns (requirement - (clock arrival + clock path + data path + uncertainty))
+  Source:               u2/data_2 (FF)
+  Destination:          data<2> (PAD)
+  Source Clock:         CLK_BUFG rising at 0.000ns
+  Requirement:          14.150ns
+  Data Path Delay:      5.596ns (Levels of Logic = 1)
+  Clock Path Delay:     8.142ns (Levels of Logic = 2)
+  Clock Uncertainty:    0.401ns
+
+  Clock Uncertainty:          0.401ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.050ns
+    Total Input Jitter (TIJ):   0.800ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Clock Path at Slow Process Corner: CLK_I to u2/data_2
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    P12.I                Tiopi                 1.557   CLK_I
+                                                       CLK_I
+                                                       IBUFG_inst
+                                                       ProtoComp67.IMUX
+    BUFGMUX_X2Y2.I0      net (fanout=1)        4.927   CLK
+    BUFGMUX_X2Y2.O       Tgi0o                 0.209   CLK_BUFG
+                                                       CLK_BUFG
+    SLICE_X1Y16.CLK      net (fanout=518)      1.449   CLK_BUFG
+    -------------------------------------------------  ---------------------------
+    Total                                      8.142ns (1.766ns logic, 6.376ns route)
+                                                       (21.7% logic, 78.3% route)
+
+  Maximum Data Path at Slow Process Corner: u2/data_2 to data<2>
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X1Y16.CQ       Tcko                  0.430   u2/data<3>
+                                                       u2/data_2
+    P33.O                net (fanout=2)        3.184   u2/data<2>
+    P33.PAD              Tioop                 1.982   data<2>
+                                                       data_2_OBUF
+                                                       data<2>
+    -------------------------------------------------  ---------------------------
+    Total                                      5.596ns (2.412ns logic, 3.184ns route)
+                                                       (43.1% logic, 56.9% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point data<3> (P32.PAD), 1 path
+--------------------------------------------------------------------------------
+Slack (slowest paths):  0.011ns (requirement - (clock arrival + clock path + data path + uncertainty))
+  Source:               u2/data_3 (FF)
+  Destination:          data<3> (PAD)
+  Source Clock:         CLK_BUFG rising at 0.000ns
+  Requirement:          14.150ns
+  Data Path Delay:      5.596ns (Levels of Logic = 1)
+  Clock Path Delay:     8.142ns (Levels of Logic = 2)
+  Clock Uncertainty:    0.401ns
+
+  Clock Uncertainty:          0.401ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.050ns
+    Total Input Jitter (TIJ):   0.800ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Clock Path at Slow Process Corner: CLK_I to u2/data_3
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    P12.I                Tiopi                 1.557   CLK_I
+                                                       CLK_I
+                                                       IBUFG_inst
+                                                       ProtoComp67.IMUX
+    BUFGMUX_X2Y2.I0      net (fanout=1)        4.927   CLK
+    BUFGMUX_X2Y2.O       Tgi0o                 0.209   CLK_BUFG
+                                                       CLK_BUFG
+    SLICE_X1Y16.CLK      net (fanout=518)      1.449   CLK_BUFG
+    -------------------------------------------------  ---------------------------
+    Total                                      8.142ns (1.766ns logic, 6.376ns route)
+                                                       (21.7% logic, 78.3% route)
+
+  Maximum Data Path at Slow Process Corner: u2/data_3 to data<3>
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X1Y16.DQ       Tcko                  0.430   u2/data<3>
+                                                       u2/data_3
+    P32.O                net (fanout=2)        3.184   u2/data<3>
+    P32.PAD              Tioop                 1.982   data<3>
+                                                       data_3_OBUF
+                                                       data<3>
+    -------------------------------------------------  ---------------------------
+    Total                                      5.596ns (2.412ns logic, 3.184ns route)
+                                                       (43.1% logic, 56.9% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point wr_n (P124.PAD), 1 path
+--------------------------------------------------------------------------------
+Slack (slowest paths):  0.044ns (requirement - (clock arrival + clock path + data path + uncertainty))
+  Source:               u2/wr_n (FF)
+  Destination:          wr_n (PAD)
+  Source Clock:         CLK_BUFG rising at 0.000ns
+  Requirement:          14.150ns
+  Data Path Delay:      5.528ns (Levels of Logic = 1)
+  Clock Path Delay:     8.177ns (Levels of Logic = 2)
+  Clock Uncertainty:    0.401ns
+
+  Clock Uncertainty:          0.401ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.050ns
+    Total Input Jitter (TIJ):   0.800ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Clock Path at Slow Process Corner: CLK_I to u2/wr_n
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    P12.I                Tiopi                 1.557   CLK_I
+                                                       CLK_I
+                                                       IBUFG_inst
+                                                       ProtoComp67.IMUX
+    BUFGMUX_X2Y2.I0      net (fanout=1)        4.927   CLK
+    BUFGMUX_X2Y2.O       Tgi0o                 0.209   CLK_BUFG
+                                                       CLK_BUFG
+    SLICE_X11Y57.CLK     net (fanout=518)      1.484   CLK_BUFG
+    -------------------------------------------------  ---------------------------
+    Total                                      8.177ns (1.766ns logic, 6.411ns route)
+                                                       (21.6% logic, 78.4% route)
+
+  Maximum Data Path at Slow Process Corner: u2/wr_n to wr_n
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X11Y57.AQ      Tcko                  0.430   u2/wr_n
+                                                       u2/wr_n
+    P124.O               net (fanout=166)      3.116   u2/wr_n
+    P124.PAD             Tioop                 1.982   wr_n
+                                                       wr_n_OBUF
+                                                       wr_n
+    -------------------------------------------------  ---------------------------
+    Total                                      5.528ns (2.412ns logic, 3.116ns route)
+                                                       (43.6% logic, 56.4% route)
+
+--------------------------------------------------------------------------------
+
+Fastest Paths: TIMEGRP "M_FIFO_O" OFFSET = OUT 14.15 ns VALID 8.37 ns AFTER COMP "CLK_I"
+        "RISING";
+--------------------------------------------------------------------------------
+
+Paths for end point data<8> (P24.PAD), 1 path
+--------------------------------------------------------------------------------
+Delay (fastest paths):  5.308ns (clock arrival + clock path + data path - uncertainty)
+  Source:               u2/data_8 (FF)
+  Destination:          data<8> (PAD)
+  Source Clock:         CLK_BUFG rising at 0.000ns
+  Data Path Delay:      1.842ns (Levels of Logic = 1)
+  Clock Path Delay:     3.867ns (Levels of Logic = 2)
+  Clock Uncertainty:    0.401ns
+
+  Clock Uncertainty:          0.401ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.050ns
+    Total Input Jitter (TIJ):   0.800ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Minimum Clock Path at Fast Process Corner: CLK_I to u2/data_8
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    P12.I                Tiopi                 0.763   CLK_I
+                                                       CLK_I
+                                                       IBUFG_inst
+                                                       ProtoComp67.IMUX
+    BUFGMUX_X2Y2.I0      net (fanout=1)        2.538   CLK
+    BUFGMUX_X2Y2.O       Tgi0o                 0.059   CLK_BUFG
+                                                       CLK_BUFG
+    SLICE_X0Y30.CLK      net (fanout=518)      0.507   CLK_BUFG
+    -------------------------------------------------  ---------------------------
+    Total                                      3.867ns (0.822ns logic, 3.045ns route)
+                                                       (21.3% logic, 78.7% route)
+
+  Minimum Data Path at Fast Process Corner: u2/data_8 to data<8>
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X0Y30.AQ       Tcko                  0.234   u2/data<11>
+                                                       u2/data_8
+    P24.O                net (fanout=2)        0.909   u2/data<8>
+    P24.PAD              Tioop                 0.699   data<8>
+                                                       data_8_OBUF
+                                                       data<8>
+    -------------------------------------------------  ---------------------------
+    Total                                      1.842ns (0.933ns logic, 0.909ns route)
+                                                       (50.7% logic, 49.3% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point data<9> (P23.PAD), 1 path
+--------------------------------------------------------------------------------
+Delay (fastest paths):  5.308ns (clock arrival + clock path + data path - uncertainty)
+  Source:               u2/data_9 (FF)
+  Destination:          data<9> (PAD)
+  Source Clock:         CLK_BUFG rising at 0.000ns
+  Data Path Delay:      1.842ns (Levels of Logic = 1)
+  Clock Path Delay:     3.867ns (Levels of Logic = 2)
+  Clock Uncertainty:    0.401ns
+
+  Clock Uncertainty:          0.401ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.050ns
+    Total Input Jitter (TIJ):   0.800ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Minimum Clock Path at Fast Process Corner: CLK_I to u2/data_9
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    P12.I                Tiopi                 0.763   CLK_I
+                                                       CLK_I
+                                                       IBUFG_inst
+                                                       ProtoComp67.IMUX
+    BUFGMUX_X2Y2.I0      net (fanout=1)        2.538   CLK
+    BUFGMUX_X2Y2.O       Tgi0o                 0.059   CLK_BUFG
+                                                       CLK_BUFG
+    SLICE_X0Y30.CLK      net (fanout=518)      0.507   CLK_BUFG
+    -------------------------------------------------  ---------------------------
+    Total                                      3.867ns (0.822ns logic, 3.045ns route)
+                                                       (21.3% logic, 78.7% route)
+
+  Minimum Data Path at Fast Process Corner: u2/data_9 to data<9>
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X0Y30.BQ       Tcko                  0.234   u2/data<11>
+                                                       u2/data_9
+    P23.O                net (fanout=2)        0.909   u2/data<9>
+    P23.PAD              Tioop                 0.699   data<9>
+                                                       data_9_OBUF
+                                                       data<9>
+    -------------------------------------------------  ---------------------------
+    Total                                      1.842ns (0.933ns logic, 0.909ns route)
+                                                       (50.7% logic, 49.3% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point data<20> (P7.PAD), 1 path
+--------------------------------------------------------------------------------
+Delay (fastest paths):  5.323ns (clock arrival + clock path + data path - uncertainty)
+  Source:               u2/data_20 (FF)
+  Destination:          data<20> (PAD)
+  Source Clock:         CLK_BUFG rising at 0.000ns
+  Data Path Delay:      1.806ns (Levels of Logic = 1)
+  Clock Path Delay:     3.918ns (Levels of Logic = 2)
+  Clock Uncertainty:    0.401ns
+
+  Clock Uncertainty:          0.401ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.050ns
+    Total Input Jitter (TIJ):   0.800ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Minimum Clock Path at Fast Process Corner: CLK_I to u2/data_20
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    P12.I                Tiopi                 0.763   CLK_I
+                                                       CLK_I
+                                                       IBUFG_inst
+                                                       ProtoComp67.IMUX
+    BUFGMUX_X2Y2.I0      net (fanout=1)        2.538   CLK
+    BUFGMUX_X2Y2.O       Tgi0o                 0.059   CLK_BUFG
+                                                       CLK_BUFG
+    SLICE_X1Y54.CLK      net (fanout=518)      0.558   CLK_BUFG
+    -------------------------------------------------  ---------------------------
+    Total                                      3.918ns (0.822ns logic, 3.096ns route)
+                                                       (21.0% logic, 79.0% route)
+
+  Minimum Data Path at Fast Process Corner: u2/data_20 to data<20>
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X1Y54.AQ       Tcko                  0.198   u2/data<23>
+                                                       u2/data_20
+    P7.O                 net (fanout=2)        0.909   u2/data<20>
+    P7.PAD               Tioop                 0.699   data<20>
+                                                       data_20_OBUF
+                                                       data<20>
+    -------------------------------------------------  ---------------------------
+    Total                                      1.806ns (0.897ns logic, 0.909ns route)
+                                                       (49.7% logic, 50.3% route)
+
+--------------------------------------------------------------------------------
+
+
+All constraints were met.
+
+
+Data Sheet report:
+-----------------
+All values displayed in nanoseconds (ns)
+
+Setup/Hold to clock CLK_I
+------------+------------+------------+------------+------------+------------------+--------+
+            |Max Setup to|  Process   |Max Hold to |  Process   |                  | Clock  |
+Source      | clk (edge) |   Corner   | clk (edge) |   Corner   |Internal Clock(s) | Phase  |
+------------+------------+------------+------------+------------+------------------+--------+
+txe_n       |    8.227(R)|      SLOW  |    0.424(R)|      SLOW  |CLK_BUFG          |   0.000|
+------------+------------+------------+------------+------------+------------------+--------+
+
+Clock CLK_I to Pad
+------------+-----------------+------------+-----------------+------------+------------------+--------+
+            |Max (slowest) clk|  Process   |Min (fastest) clk|  Process   |                  | Clock  |
+Destination |  (edge) to PAD  |   Corner   |  (edge) to PAD  |   Corner   |Internal Clock(s) | Phase  |
+------------+-----------------+------------+-----------------+------------+------------------+--------+
+be<1>       |        13.324(R)|      SLOW  |         5.488(R)|      FAST  |CLK_BUFG          |   0.000|
+be<2>       |        13.213(R)|      SLOW  |         5.448(R)|      FAST  |CLK_BUFG          |   0.000|
+be<3>       |        13.190(R)|      SLOW  |         5.440(R)|      FAST  |CLK_BUFG          |   0.000|
+data<0>     |        13.960(R)|      SLOW  |         5.775(R)|      FAST  |CLK_BUFG          |   0.000|
+data<1>     |        13.960(R)|      SLOW  |         5.775(R)|      FAST  |CLK_BUFG          |   0.000|
+data<2>     |        14.139(R)|      SLOW  |         5.870(R)|      FAST  |CLK_BUFG          |   0.000|
+data<3>     |        14.139(R)|      SLOW  |         5.870(R)|      FAST  |CLK_BUFG          |   0.000|
+data<4>     |        13.585(R)|      SLOW  |         5.552(R)|      FAST  |CLK_BUFG          |   0.000|
+data<5>     |        13.595(R)|      SLOW  |         5.562(R)|      FAST  |CLK_BUFG          |   0.000|
+data<6>     |        13.330(R)|      SLOW  |         5.420(R)|      FAST  |CLK_BUFG          |   0.000|
+data<7>     |        13.330(R)|      SLOW  |         5.420(R)|      FAST  |CLK_BUFG          |   0.000|
+data<8>     |        13.127(R)|      SLOW  |         5.308(R)|      FAST  |CLK_BUFG          |   0.000|
+data<9>     |        13.127(R)|      SLOW  |         5.308(R)|      FAST  |CLK_BUFG          |   0.000|
+data<10>    |        13.364(R)|      SLOW  |         5.464(R)|      FAST  |CLK_BUFG          |   0.000|
+data<11>    |        13.364(R)|      SLOW  |         5.464(R)|      FAST  |CLK_BUFG          |   0.000|
+data<12>    |        13.271(R)|      SLOW  |         5.399(R)|      FAST  |CLK_BUFG          |   0.000|
+data<13>    |        13.271(R)|      SLOW  |         5.399(R)|      FAST  |CLK_BUFG          |   0.000|
+data<14>    |        13.419(R)|      SLOW  |         5.482(R)|      FAST  |CLK_BUFG          |   0.000|
+data<15>    |        13.419(R)|      SLOW  |         5.482(R)|      FAST  |CLK_BUFG          |   0.000|
+data<16>    |        13.550(R)|      SLOW  |         5.549(R)|      FAST  |CLK_BUFG          |   0.000|
+data<17>    |        13.335(R)|      SLOW  |         5.435(R)|      FAST  |CLK_BUFG          |   0.000|
+data<18>    |        13.335(R)|      SLOW  |         5.435(R)|      FAST  |CLK_BUFG          |   0.000|
+data<19>    |        13.380(R)|      SLOW  |         5.463(R)|      FAST  |CLK_BUFG          |   0.000|
+data<20>    |        13.083(R)|      SLOW  |         5.323(R)|      FAST  |CLK_BUFG          |   0.000|
+data<21>    |        13.399(R)|      SLOW  |         5.526(R)|      FAST  |CLK_BUFG          |   0.000|
+data<22>    |        13.267(R)|      SLOW  |         5.421(R)|      FAST  |CLK_BUFG          |   0.000|
+data<23>    |        13.747(R)|      SLOW  |         5.687(R)|      FAST  |CLK_BUFG          |   0.000|
+data<24>    |        13.431(R)|      SLOW  |         5.500(R)|      FAST  |CLK_BUFG          |   0.000|
+data<25>    |        13.676(R)|      SLOW  |         5.658(R)|      FAST  |CLK_BUFG          |   0.000|
+data<26>    |        13.738(R)|      SLOW  |         5.737(R)|      FAST  |CLK_BUFG          |   0.000|
+data<27>    |        13.686(R)|      SLOW  |         5.690(R)|      FAST  |CLK_BUFG          |   0.000|
+data<28>    |        13.628(R)|      SLOW  |         5.625(R)|      FAST  |CLK_BUFG          |   0.000|
+data<29>    |        13.628(R)|      SLOW  |         5.625(R)|      FAST  |CLK_BUFG          |   0.000|
+data<30>    |        13.834(R)|      SLOW  |         5.753(R)|      FAST  |CLK_BUFG          |   0.000|
+data<31>    |        13.637(R)|      SLOW  |         5.656(R)|      FAST  |CLK_BUFG          |   0.000|
+wr_n        |        14.106(R)|      SLOW  |         6.031(R)|      FAST  |CLK_BUFG          |   0.000|
+------------+-----------------+------------+-----------------+------------+------------------+--------+
+
+Clock to Setup on destination clock CLK_I
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+CLK_I          |   13.020|         |         |         |
+---------------+---------+---------+---------+---------+
+
+TIMEGRP "M_FIFO_I" OFFSET = IN 8.57 ns VALID 9.07 ns BEFORE COMP "CLK_I"         "RISING";
+Worst Case Data Window 8.651; Ideal Clock Offset To Actual Clock -0.134; 
+------------------+------------+------------+------------+------------+---------+---------+-------------+
+                  |            |  Process   |            |  Process   |  Setup  |  Hold   |Source Offset|
+Source            |   Setup    |   Corner   |    Hold    |   Corner   |  Slack  |  Slack  |  To Center  |
+------------------+------------+------------+------------+------------+---------+---------+-------------+
+txe_n             |    8.227(R)|      SLOW  |    0.424(R)|      SLOW  |    0.343|    0.076|        0.134|
+------------------+------------+------------+------------+------------+---------+---------+-------------+
+Worst Case Summary|       8.227|         -  |       0.424|         -  |    0.343|    0.076|             |
+------------------+------------+------------+------------+------------+---------+---------+-------------+
+
+TIMEGRP "M_FIFO_O" OFFSET = OUT 14.15 ns VALID 8.37 ns AFTER COMP "CLK_I"         "RISING";
+Bus Skew: 1.056 ns; 
+-----------------------------------------------+-------------+------------+-------------+------------+--------------+
+                                               |Max (slowest)|  Process   |Min (fastest)|  Process   |              |
+PAD                                            | Delay (ns)  |   Corner   | Delay (ns)  |   Corner   |Edge Skew (ns)|
+-----------------------------------------------+-------------+------------+-------------+------------+--------------+
+be<1>                                          |       13.324|      SLOW  |        5.488|      FAST  |         0.241|
+be<2>                                          |       13.213|      SLOW  |        5.448|      FAST  |         0.130|
+be<3>                                          |       13.190|      SLOW  |        5.440|      FAST  |         0.107|
+data<0>                                        |       13.960|      SLOW  |        5.775|      FAST  |         0.877|
+data<1>                                        |       13.960|      SLOW  |        5.775|      FAST  |         0.877|
+data<2>                                        |       14.139|      SLOW  |        5.870|      FAST  |         1.056|
+data<3>                                        |       14.139|      SLOW  |        5.870|      FAST  |         1.056|
+data<4>                                        |       13.585|      SLOW  |        5.552|      FAST  |         0.502|
+data<5>                                        |       13.595|      SLOW  |        5.562|      FAST  |         0.512|
+data<6>                                        |       13.330|      SLOW  |        5.420|      FAST  |         0.247|
+data<7>                                        |       13.330|      SLOW  |        5.420|      FAST  |         0.247|
+data<8>                                        |       13.127|      SLOW  |        5.308|      FAST  |         0.044|
+data<9>                                        |       13.127|      SLOW  |        5.308|      FAST  |         0.044|
+data<10>                                       |       13.364|      SLOW  |        5.464|      FAST  |         0.281|
+data<11>                                       |       13.364|      SLOW  |        5.464|      FAST  |         0.281|
+data<12>                                       |       13.271|      SLOW  |        5.399|      FAST  |         0.188|
+data<13>                                       |       13.271|      SLOW  |        5.399|      FAST  |         0.188|
+data<14>                                       |       13.419|      SLOW  |        5.482|      FAST  |         0.336|
+data<15>                                       |       13.419|      SLOW  |        5.482|      FAST  |         0.336|
+data<16>                                       |       13.550|      SLOW  |        5.549|      FAST  |         0.467|
+data<17>                                       |       13.335|      SLOW  |        5.435|      FAST  |         0.252|
+data<18>                                       |       13.335|      SLOW  |        5.435|      FAST  |         0.252|
+data<19>                                       |       13.380|      SLOW  |        5.463|      FAST  |         0.297|
+data<20>                                       |       13.083|      SLOW  |        5.323|      FAST  |         0.000|
+data<21>                                       |       13.399|      SLOW  |        5.526|      FAST  |         0.316|
+data<22>                                       |       13.267|      SLOW  |        5.421|      FAST  |         0.184|
+data<23>                                       |       13.747|      SLOW  |        5.687|      FAST  |         0.664|
+data<24>                                       |       13.431|      SLOW  |        5.500|      FAST  |         0.348|
+data<25>                                       |       13.676|      SLOW  |        5.658|      FAST  |         0.593|
+data<26>                                       |       13.738|      SLOW  |        5.737|      FAST  |         0.655|
+data<27>                                       |       13.686|      SLOW  |        5.690|      FAST  |         0.603|
+data<28>                                       |       13.628|      SLOW  |        5.625|      FAST  |         0.545|
+data<29>                                       |       13.628|      SLOW  |        5.625|      FAST  |         0.545|
+data<30>                                       |       13.834|      SLOW  |        5.753|      FAST  |         0.751|
+data<31>                                       |       13.637|      SLOW  |        5.656|      FAST  |         0.554|
+wr_n                                           |       14.106|      SLOW  |        6.031|      FAST  |         1.023|
+-----------------------------------------------+-------------+------------+-------------+------------+--------------+
+
+
+Timing summary:
+---------------
+
+Timing errors: 0  Score: 0  (Setup/Max: 0, Hold: 0)
+
+Constraints cover 75964 paths, 0 nets, and 10685 connections
+
+Design statistics:
+   Minimum period:  13.020ns{1}   (Maximum frequency:  76.805MHz)
+   Minimum input required time before clock:   8.227ns
+   Minimum output required time after clock:  14.139ns
+
+
+------------------------------------Footnotes-----------------------------------
+1)  The minimum period statistic assumes all single cycle delays.
+
+Analysis completed Mon Jun 24 13:21:19 2019 
+--------------------------------------------------------------------------------
+
+Trace Settings:
+-------------------------
+Trace Settings 
+
+Peak Memory Usage: 430 MB
+
+
+

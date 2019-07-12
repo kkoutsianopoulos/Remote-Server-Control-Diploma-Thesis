@@ -1,0 +1,8 @@
+INTSTYLE=ise
+INFILE=/home/kkoutsianopoulos/Documents/ise_projects/ADV_Capture_1/ADV_Capture/ADV_Capture.ncd
+OUTFILE=/home/kkoutsianopoulos/Documents/ise_projects/ADV_Capture_1/ADV_Capture/ADV_Capture.bit
+FAMILY=Spartan6
+PART=xc6slx9-2tqg144
+WORKINGDIR=/home/kkoutsianopoulos/Documents/ise_projects/ADV_Capture_1/ADV_Capture
+LICENSE=WebPack
+USER_INFO=__0_0_0

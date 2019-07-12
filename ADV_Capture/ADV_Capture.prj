@@ -1,0 +1,3 @@
+verilog work "Output_Stage.v"
+verilog work "Input_Stage.v"
+verilog work "ADV_Capture.v"

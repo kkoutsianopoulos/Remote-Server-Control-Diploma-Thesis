@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="/home/kkoutsianopoulos/Documents/ise_projects/ADV_Capture_1/ADV_Capture/Input_Stage_test_isim_beh.wdb" id="1" type="auto">
+         <top_modules>
+            <top_module name="Input_Stage_test" />
+            <top_module name="glbl" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <WVObjectSize size="8" />
+   <wvobject fp_name="/Input_Stage_test/data" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">data[31:0]</obj_property>
+      <obj_property name="ObjectShortName">data[31:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Input_Stage_test/counter" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">counter[20:0]</obj_property>
+      <obj_property name="ObjectShortName">counter[20:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Input_Stage_test/rst_n" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">rst_n</obj_property>
+      <obj_property name="ObjectShortName">rst_n</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Input_Stage_test/Pixel_Bus" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">Pixel_Bus[15:0]</obj_property>
+      <obj_property name="ObjectShortName">Pixel_Bus[15:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Input_Stage_test/HS" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">HS</obj_property>
+      <obj_property name="ObjectShortName">HS</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Input_Stage_test/VS" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">VS</obj_property>
+      <obj_property name="ObjectShortName">VS</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Input_Stage_test/DE" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">DE</obj_property>
+      <obj_property name="ObjectShortName">DE</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Input_Stage_test/LLC" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">LLC</obj_property>
+      <obj_property name="ObjectShortName">LLC</obj_property>
+   </wvobject>
+</wave_config>

@@ -1,0 +1,1813 @@
+Release 14.7 - xst P.20131013 (lin64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> 
+Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.04 secs
+ 
+--> 
+Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.04 secs
+ 
+--> 
+Reading design: ADV_Capture.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Parsing
+  3) HDL Elaboration
+  4) HDL Synthesis
+       4.1) HDL Synthesis Report
+  5) Advanced HDL Synthesis
+       5.1) Advanced HDL Synthesis Report
+  6) Low Level Synthesis
+  7) Partition Report
+  8) Design Summary
+       8.1) Primitive and Black Box Usage
+       8.2) Device utilization summary
+       8.3) Partition Resource Summary
+       8.4) Timing Report
+            8.4.1) Clock Information
+            8.4.2) Asynchronous Control Signals Information
+            8.4.3) Timing Summary
+            8.4.4) Timing Details
+            8.4.5) Cross Clock Domains Report
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "ADV_Capture.prj"
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "ADV_Capture"
+Output Format                      : NGC
+Target Device                      : xc6slx9-2-tqg144
+
+---- Source Options
+Top Module Name                    : ADV_Capture
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Shift Register Extraction          : YES
+ROM Style                          : Auto
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Shift Register Minimum Size        : 2
+Use DSP Block                      : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+LUT Combining                      : Auto
+Reduce Control Sets                : Auto
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100000
+Add Generic Clock Buffer(BUFG)     : 16
+Register Duplication               : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Auto
+Use Synchronous Set                : Auto
+Use Synchronous Reset              : Auto
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Power Reduction                    : NO
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+DSP48 Utilization Ratio            : 100
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Parsing                                  *
+=========================================================================
+Analyzing Verilog file "/home/kkoutsianopoulos/Documents/ise_projects/ADV_Capture_1/ADV_Capture/Output_Stage.v" into library work
+Parsing module <Output_Stage>.
+Analyzing Verilog file "/home/kkoutsianopoulos/Documents/ise_projects/ADV_Capture_1/ADV_Capture/Input_Stage.v" into library work
+Parsing module <Input_Stage>.
+Analyzing Verilog file "/home/kkoutsianopoulos/Documents/ise_projects/ADV_Capture_1/ADV_Capture/ADV_Capture.v" into library work
+Parsing module <ADV_Capture>.
+
+=========================================================================
+*                            HDL Elaboration                            *
+=========================================================================
+
+Elaborating module <ADV_Capture>.
+
+Elaborating module <IBUFG(IOSTANDARD="DEFAULT")>.
+
+Elaborating module <Input_Stage>.
+
+Elaborating module <Output_Stage>.
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Synthesizing Unit <ADV_Capture>.
+    Related source file is "/home/kkoutsianopoulos/Documents/ise_projects/ADV_Capture_1/ADV_Capture/ADV_Capture.v".
+WARNING:Xst:647 - Input <HS> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+    Summary:
+	no macro.
+Unit <ADV_Capture> synthesized.
+
+Synthesizing Unit <Input_Stage>.
+    Related source file is "/home/kkoutsianopoulos/Documents/ise_projects/ADV_Capture_1/ADV_Capture/Input_Stage.v".
+    Found 32-bit register for signal <data>.
+    Found 21-bit register for signal <counter>.
+    Found 1-bit register for signal <flag>.
+    Found 1-bit register for signal <vs_1>.
+    Found 1-bit register for signal <vs_2>.
+    Found 21-bit adder for signal <counter[20]_GND_3_o_add_3_OUT> created at line 51.
+    Found 21-bit comparator lessequal for signal <n0029> created at line 89
+    Summary:
+	inferred   1 Adder/Subtractor(s).
+	inferred  56 D-type flip-flop(s).
+	inferred   1 Comparator(s).
+	inferred  18 Multiplexer(s).
+Unit <Input_Stage> synthesized.
+
+Synthesizing Unit <Output_Stage>.
+    Related source file is "/home/kkoutsianopoulos/Documents/ise_projects/ADV_Capture_1/ADV_Capture/Output_Stage.v".
+    Found 1-bit register for signal <wr_n>.
+    Found 32-bit register for signal <data>.
+    Found 4-bit register for signal <be>.
+    Found 6-bit register for signal <internal_fifo_counter>.
+    Found 21-bit register for signal <counter_1>.
+    Found 21-bit register for signal <counter_2>.
+    Found 1-bit register for signal <internal_fifo<9><31>>.
+    Found 1-bit register for signal <internal_fifo<9><30>>.
+    Found 1-bit register for signal <internal_fifo<9><29>>.
+    Found 1-bit register for signal <internal_fifo<9><28>>.
+    Found 1-bit register for signal <internal_fifo<9><27>>.
+    Found 1-bit register for signal <internal_fifo<9><26>>.
+    Found 1-bit register for signal <internal_fifo<9><25>>.
+    Found 1-bit register for signal <internal_fifo<9><24>>.
+    Found 1-bit register for signal <internal_fifo<9><23>>.
+    Found 1-bit register for signal <internal_fifo<9><22>>.
+    Found 1-bit register for signal <internal_fifo<9><21>>.
+    Found 1-bit register for signal <internal_fifo<9><20>>.
+    Found 1-bit register for signal <internal_fifo<9><19>>.
+    Found 1-bit register for signal <internal_fifo<9><18>>.
+    Found 1-bit register for signal <internal_fifo<9><17>>.
+    Found 1-bit register for signal <internal_fifo<9><16>>.
+    Found 1-bit register for signal <internal_fifo<9><15>>.
+    Found 1-bit register for signal <internal_fifo<9><14>>.
+    Found 1-bit register for signal <internal_fifo<9><13>>.
+    Found 1-bit register for signal <internal_fifo<9><12>>.
+    Found 1-bit register for signal <internal_fifo<9><11>>.
+    Found 1-bit register for signal <internal_fifo<9><10>>.
+    Found 1-bit register for signal <internal_fifo<9><9>>.
+    Found 1-bit register for signal <internal_fifo<9><8>>.
+    Found 1-bit register for signal <internal_fifo<9><7>>.
+    Found 1-bit register for signal <internal_fifo<9><6>>.
+    Found 1-bit register for signal <internal_fifo<9><5>>.
+    Found 1-bit register for signal <internal_fifo<9><4>>.
+    Found 1-bit register for signal <internal_fifo<9><3>>.
+    Found 1-bit register for signal <internal_fifo<9><2>>.
+    Found 1-bit register for signal <internal_fifo<9><1>>.
+    Found 1-bit register for signal <internal_fifo<9><0>>.
+    Found 1-bit register for signal <internal_fifo<8><31>>.
+    Found 1-bit register for signal <internal_fifo<8><30>>.
+    Found 1-bit register for signal <internal_fifo<8><29>>.
+    Found 1-bit register for signal <internal_fifo<8><28>>.
+    Found 1-bit register for signal <internal_fifo<8><27>>.
+    Found 1-bit register for signal <internal_fifo<8><26>>.
+    Found 1-bit register for signal <internal_fifo<8><25>>.
+    Found 1-bit register for signal <internal_fifo<8><24>>.
+    Found 1-bit register for signal <internal_fifo<8><23>>.
+    Found 1-bit register for signal <internal_fifo<8><22>>.
+    Found 1-bit register for signal <internal_fifo<8><21>>.
+    Found 1-bit register for signal <internal_fifo<8><20>>.
+    Found 1-bit register for signal <internal_fifo<8><19>>.
+    Found 1-bit register for signal <internal_fifo<8><18>>.
+    Found 1-bit register for signal <internal_fifo<8><17>>.
+    Found 1-bit register for signal <internal_fifo<8><16>>.
+    Found 1-bit register for signal <internal_fifo<8><15>>.
+    Found 1-bit register for signal <internal_fifo<8><14>>.
+    Found 1-bit register for signal <internal_fifo<8><13>>.
+    Found 1-bit register for signal <internal_fifo<8><12>>.
+    Found 1-bit register for signal <internal_fifo<8><11>>.
+    Found 1-bit register for signal <internal_fifo<8><10>>.
+    Found 1-bit register for signal <internal_fifo<8><9>>.
+    Found 1-bit register for signal <internal_fifo<8><8>>.
+    Found 1-bit register for signal <internal_fifo<8><7>>.
+    Found 1-bit register for signal <internal_fifo<8><6>>.
+    Found 1-bit register for signal <internal_fifo<8><5>>.
+    Found 1-bit register for signal <internal_fifo<8><4>>.
+    Found 1-bit register for signal <internal_fifo<8><3>>.
+    Found 1-bit register for signal <internal_fifo<8><2>>.
+    Found 1-bit register for signal <internal_fifo<8><1>>.
+    Found 1-bit register for signal <internal_fifo<8><0>>.
+    Found 1-bit register for signal <internal_fifo<7><31>>.
+    Found 1-bit register for signal <internal_fifo<7><30>>.
+    Found 1-bit register for signal <internal_fifo<7><29>>.
+    Found 1-bit register for signal <internal_fifo<7><28>>.
+    Found 1-bit register for signal <internal_fifo<7><27>>.
+    Found 1-bit register for signal <internal_fifo<7><26>>.
+    Found 1-bit register for signal <internal_fifo<7><25>>.
+    Found 1-bit register for signal <internal_fifo<7><24>>.
+    Found 1-bit register for signal <internal_fifo<7><23>>.
+    Found 1-bit register for signal <internal_fifo<7><22>>.
+    Found 1-bit register for signal <internal_fifo<7><21>>.
+    Found 1-bit register for signal <internal_fifo<7><20>>.
+    Found 1-bit register for signal <internal_fifo<7><19>>.
+    Found 1-bit register for signal <internal_fifo<7><18>>.
+    Found 1-bit register for signal <internal_fifo<7><17>>.
+    Found 1-bit register for signal <internal_fifo<7><16>>.
+    Found 1-bit register for signal <internal_fifo<7><15>>.
+    Found 1-bit register for signal <internal_fifo<7><14>>.
+    Found 1-bit register for signal <internal_fifo<7><13>>.
+    Found 1-bit register for signal <internal_fifo<7><12>>.
+    Found 1-bit register for signal <internal_fifo<7><11>>.
+    Found 1-bit register for signal <internal_fifo<7><10>>.
+    Found 1-bit register for signal <internal_fifo<7><9>>.
+    Found 1-bit register for signal <internal_fifo<7><8>>.
+    Found 1-bit register for signal <internal_fifo<7><7>>.
+    Found 1-bit register for signal <internal_fifo<7><6>>.
+    Found 1-bit register for signal <internal_fifo<7><5>>.
+    Found 1-bit register for signal <internal_fifo<7><4>>.
+    Found 1-bit register for signal <internal_fifo<7><3>>.
+    Found 1-bit register for signal <internal_fifo<7><2>>.
+    Found 1-bit register for signal <internal_fifo<7><1>>.
+    Found 1-bit register for signal <internal_fifo<7><0>>.
+    Found 1-bit register for signal <internal_fifo<6><31>>.
+    Found 1-bit register for signal <internal_fifo<6><30>>.
+    Found 1-bit register for signal <internal_fifo<6><29>>.
+    Found 1-bit register for signal <internal_fifo<6><28>>.
+    Found 1-bit register for signal <internal_fifo<6><27>>.
+    Found 1-bit register for signal <internal_fifo<6><26>>.
+    Found 1-bit register for signal <internal_fifo<6><25>>.
+    Found 1-bit register for signal <internal_fifo<6><24>>.
+    Found 1-bit register for signal <internal_fifo<6><23>>.
+    Found 1-bit register for signal <internal_fifo<6><22>>.
+    Found 1-bit register for signal <internal_fifo<6><21>>.
+    Found 1-bit register for signal <internal_fifo<6><20>>.
+    Found 1-bit register for signal <internal_fifo<6><19>>.
+    Found 1-bit register for signal <internal_fifo<6><18>>.
+    Found 1-bit register for signal <internal_fifo<6><17>>.
+    Found 1-bit register for signal <internal_fifo<6><16>>.
+    Found 1-bit register for signal <internal_fifo<6><15>>.
+    Found 1-bit register for signal <internal_fifo<6><14>>.
+    Found 1-bit register for signal <internal_fifo<6><13>>.
+    Found 1-bit register for signal <internal_fifo<6><12>>.
+    Found 1-bit register for signal <internal_fifo<6><11>>.
+    Found 1-bit register for signal <internal_fifo<6><10>>.
+    Found 1-bit register for signal <internal_fifo<6><9>>.
+    Found 1-bit register for signal <internal_fifo<6><8>>.
+    Found 1-bit register for signal <internal_fifo<6><7>>.
+    Found 1-bit register for signal <internal_fifo<6><6>>.
+    Found 1-bit register for signal <internal_fifo<6><5>>.
+    Found 1-bit register for signal <internal_fifo<6><4>>.
+    Found 1-bit register for signal <internal_fifo<6><3>>.
+    Found 1-bit register for signal <internal_fifo<6><2>>.
+    Found 1-bit register for signal <internal_fifo<6><1>>.
+    Found 1-bit register for signal <internal_fifo<6><0>>.
+    Found 1-bit register for signal <internal_fifo<5><31>>.
+    Found 1-bit register for signal <internal_fifo<5><30>>.
+    Found 1-bit register for signal <internal_fifo<5><29>>.
+    Found 1-bit register for signal <internal_fifo<5><28>>.
+    Found 1-bit register for signal <internal_fifo<5><27>>.
+    Found 1-bit register for signal <internal_fifo<5><26>>.
+    Found 1-bit register for signal <internal_fifo<5><25>>.
+    Found 1-bit register for signal <internal_fifo<5><24>>.
+    Found 1-bit register for signal <internal_fifo<5><23>>.
+    Found 1-bit register for signal <internal_fifo<5><22>>.
+    Found 1-bit register for signal <internal_fifo<5><21>>.
+    Found 1-bit register for signal <internal_fifo<5><20>>.
+    Found 1-bit register for signal <internal_fifo<5><19>>.
+    Found 1-bit register for signal <internal_fifo<5><18>>.
+    Found 1-bit register for signal <internal_fifo<5><17>>.
+    Found 1-bit register for signal <internal_fifo<5><16>>.
+    Found 1-bit register for signal <internal_fifo<5><15>>.
+    Found 1-bit register for signal <internal_fifo<5><14>>.
+    Found 1-bit register for signal <internal_fifo<5><13>>.
+    Found 1-bit register for signal <internal_fifo<5><12>>.
+    Found 1-bit register for signal <internal_fifo<5><11>>.
+    Found 1-bit register for signal <internal_fifo<5><10>>.
+    Found 1-bit register for signal <internal_fifo<5><9>>.
+    Found 1-bit register for signal <internal_fifo<5><8>>.
+    Found 1-bit register for signal <internal_fifo<5><7>>.
+    Found 1-bit register for signal <internal_fifo<5><6>>.
+    Found 1-bit register for signal <internal_fifo<5><5>>.
+    Found 1-bit register for signal <internal_fifo<5><4>>.
+    Found 1-bit register for signal <internal_fifo<5><3>>.
+    Found 1-bit register for signal <internal_fifo<5><2>>.
+    Found 1-bit register for signal <internal_fifo<5><1>>.
+    Found 1-bit register for signal <internal_fifo<5><0>>.
+    Found 1-bit register for signal <internal_fifo<4><31>>.
+    Found 1-bit register for signal <internal_fifo<4><30>>.
+    Found 1-bit register for signal <internal_fifo<4><29>>.
+    Found 1-bit register for signal <internal_fifo<4><28>>.
+    Found 1-bit register for signal <internal_fifo<4><27>>.
+    Found 1-bit register for signal <internal_fifo<4><26>>.
+    Found 1-bit register for signal <internal_fifo<4><25>>.
+    Found 1-bit register for signal <internal_fifo<4><24>>.
+    Found 1-bit register for signal <internal_fifo<4><23>>.
+    Found 1-bit register for signal <internal_fifo<4><22>>.
+    Found 1-bit register for signal <internal_fifo<4><21>>.
+    Found 1-bit register for signal <internal_fifo<4><20>>.
+    Found 1-bit register for signal <internal_fifo<4><19>>.
+    Found 1-bit register for signal <internal_fifo<4><18>>.
+    Found 1-bit register for signal <internal_fifo<4><17>>.
+    Found 1-bit register for signal <internal_fifo<4><16>>.
+    Found 1-bit register for signal <internal_fifo<4><15>>.
+    Found 1-bit register for signal <internal_fifo<4><14>>.
+    Found 1-bit register for signal <internal_fifo<4><13>>.
+    Found 1-bit register for signal <internal_fifo<4><12>>.
+    Found 1-bit register for signal <internal_fifo<4><11>>.
+    Found 1-bit register for signal <internal_fifo<4><10>>.
+    Found 1-bit register for signal <internal_fifo<4><9>>.
+    Found 1-bit register for signal <internal_fifo<4><8>>.
+    Found 1-bit register for signal <internal_fifo<4><7>>.
+    Found 1-bit register for signal <internal_fifo<4><6>>.
+    Found 1-bit register for signal <internal_fifo<4><5>>.
+    Found 1-bit register for signal <internal_fifo<4><4>>.
+    Found 1-bit register for signal <internal_fifo<4><3>>.
+    Found 1-bit register for signal <internal_fifo<4><2>>.
+    Found 1-bit register for signal <internal_fifo<4><1>>.
+    Found 1-bit register for signal <internal_fifo<4><0>>.
+    Found 1-bit register for signal <internal_fifo<3><31>>.
+    Found 1-bit register for signal <internal_fifo<3><30>>.
+    Found 1-bit register for signal <internal_fifo<3><29>>.
+    Found 1-bit register for signal <internal_fifo<3><28>>.
+    Found 1-bit register for signal <internal_fifo<3><27>>.
+    Found 1-bit register for signal <internal_fifo<3><26>>.
+    Found 1-bit register for signal <internal_fifo<3><25>>.
+    Found 1-bit register for signal <internal_fifo<3><24>>.
+    Found 1-bit register for signal <internal_fifo<3><23>>.
+    Found 1-bit register for signal <internal_fifo<3><22>>.
+    Found 1-bit register for signal <internal_fifo<3><21>>.
+    Found 1-bit register for signal <internal_fifo<3><20>>.
+    Found 1-bit register for signal <internal_fifo<3><19>>.
+    Found 1-bit register for signal <internal_fifo<3><18>>.
+    Found 1-bit register for signal <internal_fifo<3><17>>.
+    Found 1-bit register for signal <internal_fifo<3><16>>.
+    Found 1-bit register for signal <internal_fifo<3><15>>.
+    Found 1-bit register for signal <internal_fifo<3><14>>.
+    Found 1-bit register for signal <internal_fifo<3><13>>.
+    Found 1-bit register for signal <internal_fifo<3><12>>.
+    Found 1-bit register for signal <internal_fifo<3><11>>.
+    Found 1-bit register for signal <internal_fifo<3><10>>.
+    Found 1-bit register for signal <internal_fifo<3><9>>.
+    Found 1-bit register for signal <internal_fifo<3><8>>.
+    Found 1-bit register for signal <internal_fifo<3><7>>.
+    Found 1-bit register for signal <internal_fifo<3><6>>.
+    Found 1-bit register for signal <internal_fifo<3><5>>.
+    Found 1-bit register for signal <internal_fifo<3><4>>.
+    Found 1-bit register for signal <internal_fifo<3><3>>.
+    Found 1-bit register for signal <internal_fifo<3><2>>.
+    Found 1-bit register for signal <internal_fifo<3><1>>.
+    Found 1-bit register for signal <internal_fifo<3><0>>.
+    Found 1-bit register for signal <internal_fifo<2><31>>.
+    Found 1-bit register for signal <internal_fifo<2><30>>.
+    Found 1-bit register for signal <internal_fifo<2><29>>.
+    Found 1-bit register for signal <internal_fifo<2><28>>.
+    Found 1-bit register for signal <internal_fifo<2><27>>.
+    Found 1-bit register for signal <internal_fifo<2><26>>.
+    Found 1-bit register for signal <internal_fifo<2><25>>.
+    Found 1-bit register for signal <internal_fifo<2><24>>.
+    Found 1-bit register for signal <internal_fifo<2><23>>.
+    Found 1-bit register for signal <internal_fifo<2><22>>.
+    Found 1-bit register for signal <internal_fifo<2><21>>.
+    Found 1-bit register for signal <internal_fifo<2><20>>.
+    Found 1-bit register for signal <internal_fifo<2><19>>.
+    Found 1-bit register for signal <internal_fifo<2><18>>.
+    Found 1-bit register for signal <internal_fifo<2><17>>.
+    Found 1-bit register for signal <internal_fifo<2><16>>.
+    Found 1-bit register for signal <internal_fifo<2><15>>.
+    Found 1-bit register for signal <internal_fifo<2><14>>.
+    Found 1-bit register for signal <internal_fifo<2><13>>.
+    Found 1-bit register for signal <internal_fifo<2><12>>.
+    Found 1-bit register for signal <internal_fifo<2><11>>.
+    Found 1-bit register for signal <internal_fifo<2><10>>.
+    Found 1-bit register for signal <internal_fifo<2><9>>.
+    Found 1-bit register for signal <internal_fifo<2><8>>.
+    Found 1-bit register for signal <internal_fifo<2><7>>.
+    Found 1-bit register for signal <internal_fifo<2><6>>.
+    Found 1-bit register for signal <internal_fifo<2><5>>.
+    Found 1-bit register for signal <internal_fifo<2><4>>.
+    Found 1-bit register for signal <internal_fifo<2><3>>.
+    Found 1-bit register for signal <internal_fifo<2><2>>.
+    Found 1-bit register for signal <internal_fifo<2><1>>.
+    Found 1-bit register for signal <internal_fifo<2><0>>.
+    Found 1-bit register for signal <internal_fifo<1><31>>.
+    Found 1-bit register for signal <internal_fifo<1><30>>.
+    Found 1-bit register for signal <internal_fifo<1><29>>.
+    Found 1-bit register for signal <internal_fifo<1><28>>.
+    Found 1-bit register for signal <internal_fifo<1><27>>.
+    Found 1-bit register for signal <internal_fifo<1><26>>.
+    Found 1-bit register for signal <internal_fifo<1><25>>.
+    Found 1-bit register for signal <internal_fifo<1><24>>.
+    Found 1-bit register for signal <internal_fifo<1><23>>.
+    Found 1-bit register for signal <internal_fifo<1><22>>.
+    Found 1-bit register for signal <internal_fifo<1><21>>.
+    Found 1-bit register for signal <internal_fifo<1><20>>.
+    Found 1-bit register for signal <internal_fifo<1><19>>.
+    Found 1-bit register for signal <internal_fifo<1><18>>.
+    Found 1-bit register for signal <internal_fifo<1><17>>.
+    Found 1-bit register for signal <internal_fifo<1><16>>.
+    Found 1-bit register for signal <internal_fifo<1><15>>.
+    Found 1-bit register for signal <internal_fifo<1><14>>.
+    Found 1-bit register for signal <internal_fifo<1><13>>.
+    Found 1-bit register for signal <internal_fifo<1><12>>.
+    Found 1-bit register for signal <internal_fifo<1><11>>.
+    Found 1-bit register for signal <internal_fifo<1><10>>.
+    Found 1-bit register for signal <internal_fifo<1><9>>.
+    Found 1-bit register for signal <internal_fifo<1><8>>.
+    Found 1-bit register for signal <internal_fifo<1><7>>.
+    Found 1-bit register for signal <internal_fifo<1><6>>.
+    Found 1-bit register for signal <internal_fifo<1><5>>.
+    Found 1-bit register for signal <internal_fifo<1><4>>.
+    Found 1-bit register for signal <internal_fifo<1><3>>.
+    Found 1-bit register for signal <internal_fifo<1><2>>.
+    Found 1-bit register for signal <internal_fifo<1><1>>.
+    Found 1-bit register for signal <internal_fifo<1><0>>.
+    Found 1-bit register for signal <internal_fifo<0><31>>.
+    Found 1-bit register for signal <internal_fifo<0><30>>.
+    Found 1-bit register for signal <internal_fifo<0><29>>.
+    Found 1-bit register for signal <internal_fifo<0><28>>.
+    Found 1-bit register for signal <internal_fifo<0><27>>.
+    Found 1-bit register for signal <internal_fifo<0><26>>.
+    Found 1-bit register for signal <internal_fifo<0><25>>.
+    Found 1-bit register for signal <internal_fifo<0><24>>.
+    Found 1-bit register for signal <internal_fifo<0><23>>.
+    Found 1-bit register for signal <internal_fifo<0><22>>.
+    Found 1-bit register for signal <internal_fifo<0><21>>.
+    Found 1-bit register for signal <internal_fifo<0><20>>.
+    Found 1-bit register for signal <internal_fifo<0><19>>.
+    Found 1-bit register for signal <internal_fifo<0><18>>.
+    Found 1-bit register for signal <internal_fifo<0><17>>.
+    Found 1-bit register for signal <internal_fifo<0><16>>.
+    Found 1-bit register for signal <internal_fifo<0><15>>.
+    Found 1-bit register for signal <internal_fifo<0><14>>.
+    Found 1-bit register for signal <internal_fifo<0><13>>.
+    Found 1-bit register for signal <internal_fifo<0><12>>.
+    Found 1-bit register for signal <internal_fifo<0><11>>.
+    Found 1-bit register for signal <internal_fifo<0><10>>.
+    Found 1-bit register for signal <internal_fifo<0><9>>.
+    Found 1-bit register for signal <internal_fifo<0><8>>.
+    Found 1-bit register for signal <internal_fifo<0><7>>.
+    Found 1-bit register for signal <internal_fifo<0><6>>.
+    Found 1-bit register for signal <internal_fifo<0><5>>.
+    Found 1-bit register for signal <internal_fifo<0><4>>.
+    Found 1-bit register for signal <internal_fifo<0><3>>.
+    Found 1-bit register for signal <internal_fifo<0><2>>.
+    Found 1-bit register for signal <internal_fifo<0><1>>.
+    Found 1-bit register for signal <internal_fifo<0><0>>.
+    Found 1-bit register for signal <internal_fifo<39><31>>.
+    Found 1-bit register for signal <internal_fifo<39><30>>.
+    Found 1-bit register for signal <internal_fifo<39><29>>.
+    Found 1-bit register for signal <internal_fifo<39><28>>.
+    Found 1-bit register for signal <internal_fifo<39><27>>.
+    Found 1-bit register for signal <internal_fifo<39><26>>.
+    Found 1-bit register for signal <internal_fifo<39><25>>.
+    Found 1-bit register for signal <internal_fifo<39><24>>.
+    Found 1-bit register for signal <internal_fifo<39><23>>.
+    Found 1-bit register for signal <internal_fifo<39><22>>.
+    Found 1-bit register for signal <internal_fifo<39><21>>.
+    Found 1-bit register for signal <internal_fifo<39><20>>.
+    Found 1-bit register for signal <internal_fifo<39><19>>.
+    Found 1-bit register for signal <internal_fifo<39><18>>.
+    Found 1-bit register for signal <internal_fifo<39><17>>.
+    Found 1-bit register for signal <internal_fifo<39><16>>.
+    Found 1-bit register for signal <internal_fifo<39><15>>.
+    Found 1-bit register for signal <internal_fifo<39><14>>.
+    Found 1-bit register for signal <internal_fifo<39><13>>.
+    Found 1-bit register for signal <internal_fifo<39><12>>.
+    Found 1-bit register for signal <internal_fifo<39><11>>.
+    Found 1-bit register for signal <internal_fifo<39><10>>.
+    Found 1-bit register for signal <internal_fifo<39><9>>.
+    Found 1-bit register for signal <internal_fifo<39><8>>.
+    Found 1-bit register for signal <internal_fifo<39><7>>.
+    Found 1-bit register for signal <internal_fifo<39><6>>.
+    Found 1-bit register for signal <internal_fifo<39><5>>.
+    Found 1-bit register for signal <internal_fifo<39><4>>.
+    Found 1-bit register for signal <internal_fifo<39><3>>.
+    Found 1-bit register for signal <internal_fifo<39><2>>.
+    Found 1-bit register for signal <internal_fifo<39><1>>.
+    Found 1-bit register for signal <internal_fifo<39><0>>.
+    Found 1-bit register for signal <internal_fifo<38><31>>.
+    Found 1-bit register for signal <internal_fifo<38><30>>.
+    Found 1-bit register for signal <internal_fifo<38><29>>.
+    Found 1-bit register for signal <internal_fifo<38><28>>.
+    Found 1-bit register for signal <internal_fifo<38><27>>.
+    Found 1-bit register for signal <internal_fifo<38><26>>.
+    Found 1-bit register for signal <internal_fifo<38><25>>.
+    Found 1-bit register for signal <internal_fifo<38><24>>.
+    Found 1-bit register for signal <internal_fifo<38><23>>.
+    Found 1-bit register for signal <internal_fifo<38><22>>.
+    Found 1-bit register for signal <internal_fifo<38><21>>.
+    Found 1-bit register for signal <internal_fifo<38><20>>.
+    Found 1-bit register for signal <internal_fifo<38><19>>.
+    Found 1-bit register for signal <internal_fifo<38><18>>.
+    Found 1-bit register for signal <internal_fifo<38><17>>.
+    Found 1-bit register for signal <internal_fifo<38><16>>.
+    Found 1-bit register for signal <internal_fifo<38><15>>.
+    Found 1-bit register for signal <internal_fifo<38><14>>.
+    Found 1-bit register for signal <internal_fifo<38><13>>.
+    Found 1-bit register for signal <internal_fifo<38><12>>.
+    Found 1-bit register for signal <internal_fifo<38><11>>.
+    Found 1-bit register for signal <internal_fifo<38><10>>.
+    Found 1-bit register for signal <internal_fifo<38><9>>.
+    Found 1-bit register for signal <internal_fifo<38><8>>.
+    Found 1-bit register for signal <internal_fifo<38><7>>.
+    Found 1-bit register for signal <internal_fifo<38><6>>.
+    Found 1-bit register for signal <internal_fifo<38><5>>.
+    Found 1-bit register for signal <internal_fifo<38><4>>.
+    Found 1-bit register for signal <internal_fifo<38><3>>.
+    Found 1-bit register for signal <internal_fifo<38><2>>.
+    Found 1-bit register for signal <internal_fifo<38><1>>.
+    Found 1-bit register for signal <internal_fifo<38><0>>.
+    Found 1-bit register for signal <internal_fifo<37><31>>.
+    Found 1-bit register for signal <internal_fifo<37><30>>.
+    Found 1-bit register for signal <internal_fifo<37><29>>.
+    Found 1-bit register for signal <internal_fifo<37><28>>.
+    Found 1-bit register for signal <internal_fifo<37><27>>.
+    Found 1-bit register for signal <internal_fifo<37><26>>.
+    Found 1-bit register for signal <internal_fifo<37><25>>.
+    Found 1-bit register for signal <internal_fifo<37><24>>.
+    Found 1-bit register for signal <internal_fifo<37><23>>.
+    Found 1-bit register for signal <internal_fifo<37><22>>.
+    Found 1-bit register for signal <internal_fifo<37><21>>.
+    Found 1-bit register for signal <internal_fifo<37><20>>.
+    Found 1-bit register for signal <internal_fifo<37><19>>.
+    Found 1-bit register for signal <internal_fifo<37><18>>.
+    Found 1-bit register for signal <internal_fifo<37><17>>.
+    Found 1-bit register for signal <internal_fifo<37><16>>.
+    Found 1-bit register for signal <internal_fifo<37><15>>.
+    Found 1-bit register for signal <internal_fifo<37><14>>.
+    Found 1-bit register for signal <internal_fifo<37><13>>.
+    Found 1-bit register for signal <internal_fifo<37><12>>.
+    Found 1-bit register for signal <internal_fifo<37><11>>.
+    Found 1-bit register for signal <internal_fifo<37><10>>.
+    Found 1-bit register for signal <internal_fifo<37><9>>.
+    Found 1-bit register for signal <internal_fifo<37><8>>.
+    Found 1-bit register for signal <internal_fifo<37><7>>.
+    Found 1-bit register for signal <internal_fifo<37><6>>.
+    Found 1-bit register for signal <internal_fifo<37><5>>.
+    Found 1-bit register for signal <internal_fifo<37><4>>.
+    Found 1-bit register for signal <internal_fifo<37><3>>.
+    Found 1-bit register for signal <internal_fifo<37><2>>.
+    Found 1-bit register for signal <internal_fifo<37><1>>.
+    Found 1-bit register for signal <internal_fifo<37><0>>.
+    Found 1-bit register for signal <internal_fifo<36><31>>.
+    Found 1-bit register for signal <internal_fifo<36><30>>.
+    Found 1-bit register for signal <internal_fifo<36><29>>.
+    Found 1-bit register for signal <internal_fifo<36><28>>.
+    Found 1-bit register for signal <internal_fifo<36><27>>.
+    Found 1-bit register for signal <internal_fifo<36><26>>.
+    Found 1-bit register for signal <internal_fifo<36><25>>.
+    Found 1-bit register for signal <internal_fifo<36><24>>.
+    Found 1-bit register for signal <internal_fifo<36><23>>.
+    Found 1-bit register for signal <internal_fifo<36><22>>.
+    Found 1-bit register for signal <internal_fifo<36><21>>.
+    Found 1-bit register for signal <internal_fifo<36><20>>.
+    Found 1-bit register for signal <internal_fifo<36><19>>.
+    Found 1-bit register for signal <internal_fifo<36><18>>.
+    Found 1-bit register for signal <internal_fifo<36><17>>.
+    Found 1-bit register for signal <internal_fifo<36><16>>.
+    Found 1-bit register for signal <internal_fifo<36><15>>.
+    Found 1-bit register for signal <internal_fifo<36><14>>.
+    Found 1-bit register for signal <internal_fifo<36><13>>.
+    Found 1-bit register for signal <internal_fifo<36><12>>.
+    Found 1-bit register for signal <internal_fifo<36><11>>.
+    Found 1-bit register for signal <internal_fifo<36><10>>.
+    Found 1-bit register for signal <internal_fifo<36><9>>.
+    Found 1-bit register for signal <internal_fifo<36><8>>.
+    Found 1-bit register for signal <internal_fifo<36><7>>.
+    Found 1-bit register for signal <internal_fifo<36><6>>.
+    Found 1-bit register for signal <internal_fifo<36><5>>.
+    Found 1-bit register for signal <internal_fifo<36><4>>.
+    Found 1-bit register for signal <internal_fifo<36><3>>.
+    Found 1-bit register for signal <internal_fifo<36><2>>.
+    Found 1-bit register for signal <internal_fifo<36><1>>.
+    Found 1-bit register for signal <internal_fifo<36><0>>.
+    Found 1-bit register for signal <internal_fifo<35><31>>.
+    Found 1-bit register for signal <internal_fifo<35><30>>.
+    Found 1-bit register for signal <internal_fifo<35><29>>.
+    Found 1-bit register for signal <internal_fifo<35><28>>.
+    Found 1-bit register for signal <internal_fifo<35><27>>.
+    Found 1-bit register for signal <internal_fifo<35><26>>.
+    Found 1-bit register for signal <internal_fifo<35><25>>.
+    Found 1-bit register for signal <internal_fifo<35><24>>.
+    Found 1-bit register for signal <internal_fifo<35><23>>.
+    Found 1-bit register for signal <internal_fifo<35><22>>.
+    Found 1-bit register for signal <internal_fifo<35><21>>.
+    Found 1-bit register for signal <internal_fifo<35><20>>.
+    Found 1-bit register for signal <internal_fifo<35><19>>.
+    Found 1-bit register for signal <internal_fifo<35><18>>.
+    Found 1-bit register for signal <internal_fifo<35><17>>.
+    Found 1-bit register for signal <internal_fifo<35><16>>.
+    Found 1-bit register for signal <internal_fifo<35><15>>.
+    Found 1-bit register for signal <internal_fifo<35><14>>.
+    Found 1-bit register for signal <internal_fifo<35><13>>.
+    Found 1-bit register for signal <internal_fifo<35><12>>.
+    Found 1-bit register for signal <internal_fifo<35><11>>.
+    Found 1-bit register for signal <internal_fifo<35><10>>.
+    Found 1-bit register for signal <internal_fifo<35><9>>.
+    Found 1-bit register for signal <internal_fifo<35><8>>.
+    Found 1-bit register for signal <internal_fifo<35><7>>.
+    Found 1-bit register for signal <internal_fifo<35><6>>.
+    Found 1-bit register for signal <internal_fifo<35><5>>.
+    Found 1-bit register for signal <internal_fifo<35><4>>.
+    Found 1-bit register for signal <internal_fifo<35><3>>.
+    Found 1-bit register for signal <internal_fifo<35><2>>.
+    Found 1-bit register for signal <internal_fifo<35><1>>.
+    Found 1-bit register for signal <internal_fifo<35><0>>.
+    Found 1-bit register for signal <internal_fifo<34><31>>.
+    Found 1-bit register for signal <internal_fifo<34><30>>.
+    Found 1-bit register for signal <internal_fifo<34><29>>.
+    Found 1-bit register for signal <internal_fifo<34><28>>.
+    Found 1-bit register for signal <internal_fifo<34><27>>.
+    Found 1-bit register for signal <internal_fifo<34><26>>.
+    Found 1-bit register for signal <internal_fifo<34><25>>.
+    Found 1-bit register for signal <internal_fifo<34><24>>.
+    Found 1-bit register for signal <internal_fifo<34><23>>.
+    Found 1-bit register for signal <internal_fifo<34><22>>.
+    Found 1-bit register for signal <internal_fifo<34><21>>.
+    Found 1-bit register for signal <internal_fifo<34><20>>.
+    Found 1-bit register for signal <internal_fifo<34><19>>.
+    Found 1-bit register for signal <internal_fifo<34><18>>.
+    Found 1-bit register for signal <internal_fifo<34><17>>.
+    Found 1-bit register for signal <internal_fifo<34><16>>.
+    Found 1-bit register for signal <internal_fifo<34><15>>.
+    Found 1-bit register for signal <internal_fifo<34><14>>.
+    Found 1-bit register for signal <internal_fifo<34><13>>.
+    Found 1-bit register for signal <internal_fifo<34><12>>.
+    Found 1-bit register for signal <internal_fifo<34><11>>.
+    Found 1-bit register for signal <internal_fifo<34><10>>.
+    Found 1-bit register for signal <internal_fifo<34><9>>.
+    Found 1-bit register for signal <internal_fifo<34><8>>.
+    Found 1-bit register for signal <internal_fifo<34><7>>.
+    Found 1-bit register for signal <internal_fifo<34><6>>.
+    Found 1-bit register for signal <internal_fifo<34><5>>.
+    Found 1-bit register for signal <internal_fifo<34><4>>.
+    Found 1-bit register for signal <internal_fifo<34><3>>.
+    Found 1-bit register for signal <internal_fifo<34><2>>.
+    Found 1-bit register for signal <internal_fifo<34><1>>.
+    Found 1-bit register for signal <internal_fifo<34><0>>.
+    Found 1-bit register for signal <internal_fifo<33><31>>.
+    Found 1-bit register for signal <internal_fifo<33><30>>.
+    Found 1-bit register for signal <internal_fifo<33><29>>.
+    Found 1-bit register for signal <internal_fifo<33><28>>.
+    Found 1-bit register for signal <internal_fifo<33><27>>.
+    Found 1-bit register for signal <internal_fifo<33><26>>.
+    Found 1-bit register for signal <internal_fifo<33><25>>.
+    Found 1-bit register for signal <internal_fifo<33><24>>.
+    Found 1-bit register for signal <internal_fifo<33><23>>.
+    Found 1-bit register for signal <internal_fifo<33><22>>.
+    Found 1-bit register for signal <internal_fifo<33><21>>.
+    Found 1-bit register for signal <internal_fifo<33><20>>.
+    Found 1-bit register for signal <internal_fifo<33><19>>.
+    Found 1-bit register for signal <internal_fifo<33><18>>.
+    Found 1-bit register for signal <internal_fifo<33><17>>.
+    Found 1-bit register for signal <internal_fifo<33><16>>.
+    Found 1-bit register for signal <internal_fifo<33><15>>.
+    Found 1-bit register for signal <internal_fifo<33><14>>.
+    Found 1-bit register for signal <internal_fifo<33><13>>.
+    Found 1-bit register for signal <internal_fifo<33><12>>.
+    Found 1-bit register for signal <internal_fifo<33><11>>.
+    Found 1-bit register for signal <internal_fifo<33><10>>.
+    Found 1-bit register for signal <internal_fifo<33><9>>.
+    Found 1-bit register for signal <internal_fifo<33><8>>.
+    Found 1-bit register for signal <internal_fifo<33><7>>.
+    Found 1-bit register for signal <internal_fifo<33><6>>.
+    Found 1-bit register for signal <internal_fifo<33><5>>.
+    Found 1-bit register for signal <internal_fifo<33><4>>.
+    Found 1-bit register for signal <internal_fifo<33><3>>.
+    Found 1-bit register for signal <internal_fifo<33><2>>.
+    Found 1-bit register for signal <internal_fifo<33><1>>.
+    Found 1-bit register for signal <internal_fifo<33><0>>.
+    Found 1-bit register for signal <internal_fifo<32><31>>.
+    Found 1-bit register for signal <internal_fifo<32><30>>.
+    Found 1-bit register for signal <internal_fifo<32><29>>.
+    Found 1-bit register for signal <internal_fifo<32><28>>.
+    Found 1-bit register for signal <internal_fifo<32><27>>.
+    Found 1-bit register for signal <internal_fifo<32><26>>.
+    Found 1-bit register for signal <internal_fifo<32><25>>.
+    Found 1-bit register for signal <internal_fifo<32><24>>.
+    Found 1-bit register for signal <internal_fifo<32><23>>.
+    Found 1-bit register for signal <internal_fifo<32><22>>.
+    Found 1-bit register for signal <internal_fifo<32><21>>.
+    Found 1-bit register for signal <internal_fifo<32><20>>.
+    Found 1-bit register for signal <internal_fifo<32><19>>.
+    Found 1-bit register for signal <internal_fifo<32><18>>.
+    Found 1-bit register for signal <internal_fifo<32><17>>.
+    Found 1-bit register for signal <internal_fifo<32><16>>.
+    Found 1-bit register for signal <internal_fifo<32><15>>.
+    Found 1-bit register for signal <internal_fifo<32><14>>.
+    Found 1-bit register for signal <internal_fifo<32><13>>.
+    Found 1-bit register for signal <internal_fifo<32><12>>.
+    Found 1-bit register for signal <internal_fifo<32><11>>.
+    Found 1-bit register for signal <internal_fifo<32><10>>.
+    Found 1-bit register for signal <internal_fifo<32><9>>.
+    Found 1-bit register for signal <internal_fifo<32><8>>.
+    Found 1-bit register for signal <internal_fifo<32><7>>.
+    Found 1-bit register for signal <internal_fifo<32><6>>.
+    Found 1-bit register for signal <internal_fifo<32><5>>.
+    Found 1-bit register for signal <internal_fifo<32><4>>.
+    Found 1-bit register for signal <internal_fifo<32><3>>.
+    Found 1-bit register for signal <internal_fifo<32><2>>.
+    Found 1-bit register for signal <internal_fifo<32><1>>.
+    Found 1-bit register for signal <internal_fifo<32><0>>.
+    Found 1-bit register for signal <internal_fifo<31><31>>.
+    Found 1-bit register for signal <internal_fifo<31><30>>.
+    Found 1-bit register for signal <internal_fifo<31><29>>.
+    Found 1-bit register for signal <internal_fifo<31><28>>.
+    Found 1-bit register for signal <internal_fifo<31><27>>.
+    Found 1-bit register for signal <internal_fifo<31><26>>.
+    Found 1-bit register for signal <internal_fifo<31><25>>.
+    Found 1-bit register for signal <internal_fifo<31><24>>.
+    Found 1-bit register for signal <internal_fifo<31><23>>.
+    Found 1-bit register for signal <internal_fifo<31><22>>.
+    Found 1-bit register for signal <internal_fifo<31><21>>.
+    Found 1-bit register for signal <internal_fifo<31><20>>.
+    Found 1-bit register for signal <internal_fifo<31><19>>.
+    Found 1-bit register for signal <internal_fifo<31><18>>.
+    Found 1-bit register for signal <internal_fifo<31><17>>.
+    Found 1-bit register for signal <internal_fifo<31><16>>.
+    Found 1-bit register for signal <internal_fifo<31><15>>.
+    Found 1-bit register for signal <internal_fifo<31><14>>.
+    Found 1-bit register for signal <internal_fifo<31><13>>.
+    Found 1-bit register for signal <internal_fifo<31><12>>.
+    Found 1-bit register for signal <internal_fifo<31><11>>.
+    Found 1-bit register for signal <internal_fifo<31><10>>.
+    Found 1-bit register for signal <internal_fifo<31><9>>.
+    Found 1-bit register for signal <internal_fifo<31><8>>.
+    Found 1-bit register for signal <internal_fifo<31><7>>.
+    Found 1-bit register for signal <internal_fifo<31><6>>.
+    Found 1-bit register for signal <internal_fifo<31><5>>.
+    Found 1-bit register for signal <internal_fifo<31><4>>.
+    Found 1-bit register for signal <internal_fifo<31><3>>.
+    Found 1-bit register for signal <internal_fifo<31><2>>.
+    Found 1-bit register for signal <internal_fifo<31><1>>.
+    Found 1-bit register for signal <internal_fifo<31><0>>.
+    Found 1-bit register for signal <internal_fifo<30><31>>.
+    Found 1-bit register for signal <internal_fifo<30><30>>.
+    Found 1-bit register for signal <internal_fifo<30><29>>.
+    Found 1-bit register for signal <internal_fifo<30><28>>.
+    Found 1-bit register for signal <internal_fifo<30><27>>.
+    Found 1-bit register for signal <internal_fifo<30><26>>.
+    Found 1-bit register for signal <internal_fifo<30><25>>.
+    Found 1-bit register for signal <internal_fifo<30><24>>.
+    Found 1-bit register for signal <internal_fifo<30><23>>.
+    Found 1-bit register for signal <internal_fifo<30><22>>.
+    Found 1-bit register for signal <internal_fifo<30><21>>.
+    Found 1-bit register for signal <internal_fifo<30><20>>.
+    Found 1-bit register for signal <internal_fifo<30><19>>.
+    Found 1-bit register for signal <internal_fifo<30><18>>.
+    Found 1-bit register for signal <internal_fifo<30><17>>.
+    Found 1-bit register for signal <internal_fifo<30><16>>.
+    Found 1-bit register for signal <internal_fifo<30><15>>.
+    Found 1-bit register for signal <internal_fifo<30><14>>.
+    Found 1-bit register for signal <internal_fifo<30><13>>.
+    Found 1-bit register for signal <internal_fifo<30><12>>.
+    Found 1-bit register for signal <internal_fifo<30><11>>.
+    Found 1-bit register for signal <internal_fifo<30><10>>.
+    Found 1-bit register for signal <internal_fifo<30><9>>.
+    Found 1-bit register for signal <internal_fifo<30><8>>.
+    Found 1-bit register for signal <internal_fifo<30><7>>.
+    Found 1-bit register for signal <internal_fifo<30><6>>.
+    Found 1-bit register for signal <internal_fifo<30><5>>.
+    Found 1-bit register for signal <internal_fifo<30><4>>.
+    Found 1-bit register for signal <internal_fifo<30><3>>.
+    Found 1-bit register for signal <internal_fifo<30><2>>.
+    Found 1-bit register for signal <internal_fifo<30><1>>.
+    Found 1-bit register for signal <internal_fifo<30><0>>.
+    Found 1-bit register for signal <internal_fifo<29><31>>.
+    Found 1-bit register for signal <internal_fifo<29><30>>.
+    Found 1-bit register for signal <internal_fifo<29><29>>.
+    Found 1-bit register for signal <internal_fifo<29><28>>.
+    Found 1-bit register for signal <internal_fifo<29><27>>.
+    Found 1-bit register for signal <internal_fifo<29><26>>.
+    Found 1-bit register for signal <internal_fifo<29><25>>.
+    Found 1-bit register for signal <internal_fifo<29><24>>.
+    Found 1-bit register for signal <internal_fifo<29><23>>.
+    Found 1-bit register for signal <internal_fifo<29><22>>.
+    Found 1-bit register for signal <internal_fifo<29><21>>.
+    Found 1-bit register for signal <internal_fifo<29><20>>.
+    Found 1-bit register for signal <internal_fifo<29><19>>.
+    Found 1-bit register for signal <internal_fifo<29><18>>.
+    Found 1-bit register for signal <internal_fifo<29><17>>.
+    Found 1-bit register for signal <internal_fifo<29><16>>.
+    Found 1-bit register for signal <internal_fifo<29><15>>.
+    Found 1-bit register for signal <internal_fifo<29><14>>.
+    Found 1-bit register for signal <internal_fifo<29><13>>.
+    Found 1-bit register for signal <internal_fifo<29><12>>.
+    Found 1-bit register for signal <internal_fifo<29><11>>.
+    Found 1-bit register for signal <internal_fifo<29><10>>.
+    Found 1-bit register for signal <internal_fifo<29><9>>.
+    Found 1-bit register for signal <internal_fifo<29><8>>.
+    Found 1-bit register for signal <internal_fifo<29><7>>.
+    Found 1-bit register for signal <internal_fifo<29><6>>.
+    Found 1-bit register for signal <internal_fifo<29><5>>.
+    Found 1-bit register for signal <internal_fifo<29><4>>.
+    Found 1-bit register for signal <internal_fifo<29><3>>.
+    Found 1-bit register for signal <internal_fifo<29><2>>.
+    Found 1-bit register for signal <internal_fifo<29><1>>.
+    Found 1-bit register for signal <internal_fifo<29><0>>.
+    Found 1-bit register for signal <internal_fifo<28><31>>.
+    Found 1-bit register for signal <internal_fifo<28><30>>.
+    Found 1-bit register for signal <internal_fifo<28><29>>.
+    Found 1-bit register for signal <internal_fifo<28><28>>.
+    Found 1-bit register for signal <internal_fifo<28><27>>.
+    Found 1-bit register for signal <internal_fifo<28><26>>.
+    Found 1-bit register for signal <internal_fifo<28><25>>.
+    Found 1-bit register for signal <internal_fifo<28><24>>.
+    Found 1-bit register for signal <internal_fifo<28><23>>.
+    Found 1-bit register for signal <internal_fifo<28><22>>.
+    Found 1-bit register for signal <internal_fifo<28><21>>.
+    Found 1-bit register for signal <internal_fifo<28><20>>.
+    Found 1-bit register for signal <internal_fifo<28><19>>.
+    Found 1-bit register for signal <internal_fifo<28><18>>.
+    Found 1-bit register for signal <internal_fifo<28><17>>.
+    Found 1-bit register for signal <internal_fifo<28><16>>.
+    Found 1-bit register for signal <internal_fifo<28><15>>.
+    Found 1-bit register for signal <internal_fifo<28><14>>.
+    Found 1-bit register for signal <internal_fifo<28><13>>.
+    Found 1-bit register for signal <internal_fifo<28><12>>.
+    Found 1-bit register for signal <internal_fifo<28><11>>.
+    Found 1-bit register for signal <internal_fifo<28><10>>.
+    Found 1-bit register for signal <internal_fifo<28><9>>.
+    Found 1-bit register for signal <internal_fifo<28><8>>.
+    Found 1-bit register for signal <internal_fifo<28><7>>.
+    Found 1-bit register for signal <internal_fifo<28><6>>.
+    Found 1-bit register for signal <internal_fifo<28><5>>.
+    Found 1-bit register for signal <internal_fifo<28><4>>.
+    Found 1-bit register for signal <internal_fifo<28><3>>.
+    Found 1-bit register for signal <internal_fifo<28><2>>.
+    Found 1-bit register for signal <internal_fifo<28><1>>.
+    Found 1-bit register for signal <internal_fifo<28><0>>.
+    Found 1-bit register for signal <internal_fifo<27><31>>.
+    Found 1-bit register for signal <internal_fifo<27><30>>.
+    Found 1-bit register for signal <internal_fifo<27><29>>.
+    Found 1-bit register for signal <internal_fifo<27><28>>.
+    Found 1-bit register for signal <internal_fifo<27><27>>.
+    Found 1-bit register for signal <internal_fifo<27><26>>.
+    Found 1-bit register for signal <internal_fifo<27><25>>.
+    Found 1-bit register for signal <internal_fifo<27><24>>.
+    Found 1-bit register for signal <internal_fifo<27><23>>.
+    Found 1-bit register for signal <internal_fifo<27><22>>.
+    Found 1-bit register for signal <internal_fifo<27><21>>.
+    Found 1-bit register for signal <internal_fifo<27><20>>.
+    Found 1-bit register for signal <internal_fifo<27><19>>.
+    Found 1-bit register for signal <internal_fifo<27><18>>.
+    Found 1-bit register for signal <internal_fifo<27><17>>.
+    Found 1-bit register for signal <internal_fifo<27><16>>.
+    Found 1-bit register for signal <internal_fifo<27><15>>.
+    Found 1-bit register for signal <internal_fifo<27><14>>.
+    Found 1-bit register for signal <internal_fifo<27><13>>.
+    Found 1-bit register for signal <internal_fifo<27><12>>.
+    Found 1-bit register for signal <internal_fifo<27><11>>.
+    Found 1-bit register for signal <internal_fifo<27><10>>.
+    Found 1-bit register for signal <internal_fifo<27><9>>.
+    Found 1-bit register for signal <internal_fifo<27><8>>.
+    Found 1-bit register for signal <internal_fifo<27><7>>.
+    Found 1-bit register for signal <internal_fifo<27><6>>.
+    Found 1-bit register for signal <internal_fifo<27><5>>.
+    Found 1-bit register for signal <internal_fifo<27><4>>.
+    Found 1-bit register for signal <internal_fifo<27><3>>.
+    Found 1-bit register for signal <internal_fifo<27><2>>.
+    Found 1-bit register for signal <internal_fifo<27><1>>.
+    Found 1-bit register for signal <internal_fifo<27><0>>.
+    Found 1-bit register for signal <internal_fifo<26><31>>.
+    Found 1-bit register for signal <internal_fifo<26><30>>.
+    Found 1-bit register for signal <internal_fifo<26><29>>.
+    Found 1-bit register for signal <internal_fifo<26><28>>.
+    Found 1-bit register for signal <internal_fifo<26><27>>.
+    Found 1-bit register for signal <internal_fifo<26><26>>.
+    Found 1-bit register for signal <internal_fifo<26><25>>.
+    Found 1-bit register for signal <internal_fifo<26><24>>.
+    Found 1-bit register for signal <internal_fifo<26><23>>.
+    Found 1-bit register for signal <internal_fifo<26><22>>.
+    Found 1-bit register for signal <internal_fifo<26><21>>.
+    Found 1-bit register for signal <internal_fifo<26><20>>.
+    Found 1-bit register for signal <internal_fifo<26><19>>.
+    Found 1-bit register for signal <internal_fifo<26><18>>.
+    Found 1-bit register for signal <internal_fifo<26><17>>.
+    Found 1-bit register for signal <internal_fifo<26><16>>.
+    Found 1-bit register for signal <internal_fifo<26><15>>.
+    Found 1-bit register for signal <internal_fifo<26><14>>.
+    Found 1-bit register for signal <internal_fifo<26><13>>.
+    Found 1-bit register for signal <internal_fifo<26><12>>.
+    Found 1-bit register for signal <internal_fifo<26><11>>.
+    Found 1-bit register for signal <internal_fifo<26><10>>.
+    Found 1-bit register for signal <internal_fifo<26><9>>.
+    Found 1-bit register for signal <internal_fifo<26><8>>.
+    Found 1-bit register for signal <internal_fifo<26><7>>.
+    Found 1-bit register for signal <internal_fifo<26><6>>.
+    Found 1-bit register for signal <internal_fifo<26><5>>.
+    Found 1-bit register for signal <internal_fifo<26><4>>.
+    Found 1-bit register for signal <internal_fifo<26><3>>.
+    Found 1-bit register for signal <internal_fifo<26><2>>.
+    Found 1-bit register for signal <internal_fifo<26><1>>.
+    Found 1-bit register for signal <internal_fifo<26><0>>.
+    Found 1-bit register for signal <internal_fifo<25><31>>.
+    Found 1-bit register for signal <internal_fifo<25><30>>.
+    Found 1-bit register for signal <internal_fifo<25><29>>.
+    Found 1-bit register for signal <internal_fifo<25><28>>.
+    Found 1-bit register for signal <internal_fifo<25><27>>.
+    Found 1-bit register for signal <internal_fifo<25><26>>.
+    Found 1-bit register for signal <internal_fifo<25><25>>.
+    Found 1-bit register for signal <internal_fifo<25><24>>.
+    Found 1-bit register for signal <internal_fifo<25><23>>.
+    Found 1-bit register for signal <internal_fifo<25><22>>.
+    Found 1-bit register for signal <internal_fifo<25><21>>.
+    Found 1-bit register for signal <internal_fifo<25><20>>.
+    Found 1-bit register for signal <internal_fifo<25><19>>.
+    Found 1-bit register for signal <internal_fifo<25><18>>.
+    Found 1-bit register for signal <internal_fifo<25><17>>.
+    Found 1-bit register for signal <internal_fifo<25><16>>.
+    Found 1-bit register for signal <internal_fifo<25><15>>.
+    Found 1-bit register for signal <internal_fifo<25><14>>.
+    Found 1-bit register for signal <internal_fifo<25><13>>.
+    Found 1-bit register for signal <internal_fifo<25><12>>.
+    Found 1-bit register for signal <internal_fifo<25><11>>.
+    Found 1-bit register for signal <internal_fifo<25><10>>.
+    Found 1-bit register for signal <internal_fifo<25><9>>.
+    Found 1-bit register for signal <internal_fifo<25><8>>.
+    Found 1-bit register for signal <internal_fifo<25><7>>.
+    Found 1-bit register for signal <internal_fifo<25><6>>.
+    Found 1-bit register for signal <internal_fifo<25><5>>.
+    Found 1-bit register for signal <internal_fifo<25><4>>.
+    Found 1-bit register for signal <internal_fifo<25><3>>.
+    Found 1-bit register for signal <internal_fifo<25><2>>.
+    Found 1-bit register for signal <internal_fifo<25><1>>.
+    Found 1-bit register for signal <internal_fifo<25><0>>.
+    Found 1-bit register for signal <internal_fifo<24><31>>.
+    Found 1-bit register for signal <internal_fifo<24><30>>.
+    Found 1-bit register for signal <internal_fifo<24><29>>.
+    Found 1-bit register for signal <internal_fifo<24><28>>.
+    Found 1-bit register for signal <internal_fifo<24><27>>.
+    Found 1-bit register for signal <internal_fifo<24><26>>.
+    Found 1-bit register for signal <internal_fifo<24><25>>.
+    Found 1-bit register for signal <internal_fifo<24><24>>.
+    Found 1-bit register for signal <internal_fifo<24><23>>.
+    Found 1-bit register for signal <internal_fifo<24><22>>.
+    Found 1-bit register for signal <internal_fifo<24><21>>.
+    Found 1-bit register for signal <internal_fifo<24><20>>.
+    Found 1-bit register for signal <internal_fifo<24><19>>.
+    Found 1-bit register for signal <internal_fifo<24><18>>.
+    Found 1-bit register for signal <internal_fifo<24><17>>.
+    Found 1-bit register for signal <internal_fifo<24><16>>.
+    Found 1-bit register for signal <internal_fifo<24><15>>.
+    Found 1-bit register for signal <internal_fifo<24><14>>.
+    Found 1-bit register for signal <internal_fifo<24><13>>.
+    Found 1-bit register for signal <internal_fifo<24><12>>.
+    Found 1-bit register for signal <internal_fifo<24><11>>.
+    Found 1-bit register for signal <internal_fifo<24><10>>.
+    Found 1-bit register for signal <internal_fifo<24><9>>.
+    Found 1-bit register for signal <internal_fifo<24><8>>.
+    Found 1-bit register for signal <internal_fifo<24><7>>.
+    Found 1-bit register for signal <internal_fifo<24><6>>.
+    Found 1-bit register for signal <internal_fifo<24><5>>.
+    Found 1-bit register for signal <internal_fifo<24><4>>.
+    Found 1-bit register for signal <internal_fifo<24><3>>.
+    Found 1-bit register for signal <internal_fifo<24><2>>.
+    Found 1-bit register for signal <internal_fifo<24><1>>.
+    Found 1-bit register for signal <internal_fifo<24><0>>.
+    Found 1-bit register for signal <internal_fifo<23><31>>.
+    Found 1-bit register for signal <internal_fifo<23><30>>.
+    Found 1-bit register for signal <internal_fifo<23><29>>.
+    Found 1-bit register for signal <internal_fifo<23><28>>.
+    Found 1-bit register for signal <internal_fifo<23><27>>.
+    Found 1-bit register for signal <internal_fifo<23><26>>.
+    Found 1-bit register for signal <internal_fifo<23><25>>.
+    Found 1-bit register for signal <internal_fifo<23><24>>.
+    Found 1-bit register for signal <internal_fifo<23><23>>.
+    Found 1-bit register for signal <internal_fifo<23><22>>.
+    Found 1-bit register for signal <internal_fifo<23><21>>.
+    Found 1-bit register for signal <internal_fifo<23><20>>.
+    Found 1-bit register for signal <internal_fifo<23><19>>.
+    Found 1-bit register for signal <internal_fifo<23><18>>.
+    Found 1-bit register for signal <internal_fifo<23><17>>.
+    Found 1-bit register for signal <internal_fifo<23><16>>.
+    Found 1-bit register for signal <internal_fifo<23><15>>.
+    Found 1-bit register for signal <internal_fifo<23><14>>.
+    Found 1-bit register for signal <internal_fifo<23><13>>.
+    Found 1-bit register for signal <internal_fifo<23><12>>.
+    Found 1-bit register for signal <internal_fifo<23><11>>.
+    Found 1-bit register for signal <internal_fifo<23><10>>.
+    Found 1-bit register for signal <internal_fifo<23><9>>.
+    Found 1-bit register for signal <internal_fifo<23><8>>.
+    Found 1-bit register for signal <internal_fifo<23><7>>.
+    Found 1-bit register for signal <internal_fifo<23><6>>.
+    Found 1-bit register for signal <internal_fifo<23><5>>.
+    Found 1-bit register for signal <internal_fifo<23><4>>.
+    Found 1-bit register for signal <internal_fifo<23><3>>.
+    Found 1-bit register for signal <internal_fifo<23><2>>.
+    Found 1-bit register for signal <internal_fifo<23><1>>.
+    Found 1-bit register for signal <internal_fifo<23><0>>.
+    Found 1-bit register for signal <internal_fifo<22><31>>.
+    Found 1-bit register for signal <internal_fifo<22><30>>.
+    Found 1-bit register for signal <internal_fifo<22><29>>.
+    Found 1-bit register for signal <internal_fifo<22><28>>.
+    Found 1-bit register for signal <internal_fifo<22><27>>.
+    Found 1-bit register for signal <internal_fifo<22><26>>.
+    Found 1-bit register for signal <internal_fifo<22><25>>.
+    Found 1-bit register for signal <internal_fifo<22><24>>.
+    Found 1-bit register for signal <internal_fifo<22><23>>.
+    Found 1-bit register for signal <internal_fifo<22><22>>.
+    Found 1-bit register for signal <internal_fifo<22><21>>.
+    Found 1-bit register for signal <internal_fifo<22><20>>.
+    Found 1-bit register for signal <internal_fifo<22><19>>.
+    Found 1-bit register for signal <internal_fifo<22><18>>.
+    Found 1-bit register for signal <internal_fifo<22><17>>.
+    Found 1-bit register for signal <internal_fifo<22><16>>.
+    Found 1-bit register for signal <internal_fifo<22><15>>.
+    Found 1-bit register for signal <internal_fifo<22><14>>.
+    Found 1-bit register for signal <internal_fifo<22><13>>.
+    Found 1-bit register for signal <internal_fifo<22><12>>.
+    Found 1-bit register for signal <internal_fifo<22><11>>.
+    Found 1-bit register for signal <internal_fifo<22><10>>.
+    Found 1-bit register for signal <internal_fifo<22><9>>.
+    Found 1-bit register for signal <internal_fifo<22><8>>.
+    Found 1-bit register for signal <internal_fifo<22><7>>.
+    Found 1-bit register for signal <internal_fifo<22><6>>.
+    Found 1-bit register for signal <internal_fifo<22><5>>.
+    Found 1-bit register for signal <internal_fifo<22><4>>.
+    Found 1-bit register for signal <internal_fifo<22><3>>.
+    Found 1-bit register for signal <internal_fifo<22><2>>.
+    Found 1-bit register for signal <internal_fifo<22><1>>.
+    Found 1-bit register for signal <internal_fifo<22><0>>.
+    Found 1-bit register for signal <internal_fifo<21><31>>.
+    Found 1-bit register for signal <internal_fifo<21><30>>.
+    Found 1-bit register for signal <internal_fifo<21><29>>.
+    Found 1-bit register for signal <internal_fifo<21><28>>.
+    Found 1-bit register for signal <internal_fifo<21><27>>.
+    Found 1-bit register for signal <internal_fifo<21><26>>.
+    Found 1-bit register for signal <internal_fifo<21><25>>.
+    Found 1-bit register for signal <internal_fifo<21><24>>.
+    Found 1-bit register for signal <internal_fifo<21><23>>.
+    Found 1-bit register for signal <internal_fifo<21><22>>.
+    Found 1-bit register for signal <internal_fifo<21><21>>.
+    Found 1-bit register for signal <internal_fifo<21><20>>.
+    Found 1-bit register for signal <internal_fifo<21><19>>.
+    Found 1-bit register for signal <internal_fifo<21><18>>.
+    Found 1-bit register for signal <internal_fifo<21><17>>.
+    Found 1-bit register for signal <internal_fifo<21><16>>.
+    Found 1-bit register for signal <internal_fifo<21><15>>.
+    Found 1-bit register for signal <internal_fifo<21><14>>.
+    Found 1-bit register for signal <internal_fifo<21><13>>.
+    Found 1-bit register for signal <internal_fifo<21><12>>.
+    Found 1-bit register for signal <internal_fifo<21><11>>.
+    Found 1-bit register for signal <internal_fifo<21><10>>.
+    Found 1-bit register for signal <internal_fifo<21><9>>.
+    Found 1-bit register for signal <internal_fifo<21><8>>.
+    Found 1-bit register for signal <internal_fifo<21><7>>.
+    Found 1-bit register for signal <internal_fifo<21><6>>.
+    Found 1-bit register for signal <internal_fifo<21><5>>.
+    Found 1-bit register for signal <internal_fifo<21><4>>.
+    Found 1-bit register for signal <internal_fifo<21><3>>.
+    Found 1-bit register for signal <internal_fifo<21><2>>.
+    Found 1-bit register for signal <internal_fifo<21><1>>.
+    Found 1-bit register for signal <internal_fifo<21><0>>.
+    Found 1-bit register for signal <internal_fifo<20><31>>.
+    Found 1-bit register for signal <internal_fifo<20><30>>.
+    Found 1-bit register for signal <internal_fifo<20><29>>.
+    Found 1-bit register for signal <internal_fifo<20><28>>.
+    Found 1-bit register for signal <internal_fifo<20><27>>.
+    Found 1-bit register for signal <internal_fifo<20><26>>.
+    Found 1-bit register for signal <internal_fifo<20><25>>.
+    Found 1-bit register for signal <internal_fifo<20><24>>.
+    Found 1-bit register for signal <internal_fifo<20><23>>.
+    Found 1-bit register for signal <internal_fifo<20><22>>.
+    Found 1-bit register for signal <internal_fifo<20><21>>.
+    Found 1-bit register for signal <internal_fifo<20><20>>.
+    Found 1-bit register for signal <internal_fifo<20><19>>.
+    Found 1-bit register for signal <internal_fifo<20><18>>.
+    Found 1-bit register for signal <internal_fifo<20><17>>.
+    Found 1-bit register for signal <internal_fifo<20><16>>.
+    Found 1-bit register for signal <internal_fifo<20><15>>.
+    Found 1-bit register for signal <internal_fifo<20><14>>.
+    Found 1-bit register for signal <internal_fifo<20><13>>.
+    Found 1-bit register for signal <internal_fifo<20><12>>.
+    Found 1-bit register for signal <internal_fifo<20><11>>.
+    Found 1-bit register for signal <internal_fifo<20><10>>.
+    Found 1-bit register for signal <internal_fifo<20><9>>.
+    Found 1-bit register for signal <internal_fifo<20><8>>.
+    Found 1-bit register for signal <internal_fifo<20><7>>.
+    Found 1-bit register for signal <internal_fifo<20><6>>.
+    Found 1-bit register for signal <internal_fifo<20><5>>.
+    Found 1-bit register for signal <internal_fifo<20><4>>.
+    Found 1-bit register for signal <internal_fifo<20><3>>.
+    Found 1-bit register for signal <internal_fifo<20><2>>.
+    Found 1-bit register for signal <internal_fifo<20><1>>.
+    Found 1-bit register for signal <internal_fifo<20><0>>.
+    Found 1-bit register for signal <internal_fifo<19><31>>.
+    Found 1-bit register for signal <internal_fifo<19><30>>.
+    Found 1-bit register for signal <internal_fifo<19><29>>.
+    Found 1-bit register for signal <internal_fifo<19><28>>.
+    Found 1-bit register for signal <internal_fifo<19><27>>.
+    Found 1-bit register for signal <internal_fifo<19><26>>.
+    Found 1-bit register for signal <internal_fifo<19><25>>.
+    Found 1-bit register for signal <internal_fifo<19><24>>.
+    Found 1-bit register for signal <internal_fifo<19><23>>.
+    Found 1-bit register for signal <internal_fifo<19><22>>.
+    Found 1-bit register for signal <internal_fifo<19><21>>.
+    Found 1-bit register for signal <internal_fifo<19><20>>.
+    Found 1-bit register for signal <internal_fifo<19><19>>.
+    Found 1-bit register for signal <internal_fifo<19><18>>.
+    Found 1-bit register for signal <internal_fifo<19><17>>.
+    Found 1-bit register for signal <internal_fifo<19><16>>.
+    Found 1-bit register for signal <internal_fifo<19><15>>.
+    Found 1-bit register for signal <internal_fifo<19><14>>.
+    Found 1-bit register for signal <internal_fifo<19><13>>.
+    Found 1-bit register for signal <internal_fifo<19><12>>.
+    Found 1-bit register for signal <internal_fifo<19><11>>.
+    Found 1-bit register for signal <internal_fifo<19><10>>.
+    Found 1-bit register for signal <internal_fifo<19><9>>.
+    Found 1-bit register for signal <internal_fifo<19><8>>.
+    Found 1-bit register for signal <internal_fifo<19><7>>.
+    Found 1-bit register for signal <internal_fifo<19><6>>.
+    Found 1-bit register for signal <internal_fifo<19><5>>.
+    Found 1-bit register for signal <internal_fifo<19><4>>.
+    Found 1-bit register for signal <internal_fifo<19><3>>.
+    Found 1-bit register for signal <internal_fifo<19><2>>.
+    Found 1-bit register for signal <internal_fifo<19><1>>.
+    Found 1-bit register for signal <internal_fifo<19><0>>.
+    Found 1-bit register for signal <internal_fifo<18><31>>.
+    Found 1-bit register for signal <internal_fifo<18><30>>.
+    Found 1-bit register for signal <internal_fifo<18><29>>.
+    Found 1-bit register for signal <internal_fifo<18><28>>.
+    Found 1-bit register for signal <internal_fifo<18><27>>.
+    Found 1-bit register for signal <internal_fifo<18><26>>.
+    Found 1-bit register for signal <internal_fifo<18><25>>.
+    Found 1-bit register for signal <internal_fifo<18><24>>.
+    Found 1-bit register for signal <internal_fifo<18><23>>.
+    Found 1-bit register for signal <internal_fifo<18><22>>.
+    Found 1-bit register for signal <internal_fifo<18><21>>.
+    Found 1-bit register for signal <internal_fifo<18><20>>.
+    Found 1-bit register for signal <internal_fifo<18><19>>.
+    Found 1-bit register for signal <internal_fifo<18><18>>.
+    Found 1-bit register for signal <internal_fifo<18><17>>.
+    Found 1-bit register for signal <internal_fifo<18><16>>.
+    Found 1-bit register for signal <internal_fifo<18><15>>.
+    Found 1-bit register for signal <internal_fifo<18><14>>.
+    Found 1-bit register for signal <internal_fifo<18><13>>.
+    Found 1-bit register for signal <internal_fifo<18><12>>.
+    Found 1-bit register for signal <internal_fifo<18><11>>.
+    Found 1-bit register for signal <internal_fifo<18><10>>.
+    Found 1-bit register for signal <internal_fifo<18><9>>.
+    Found 1-bit register for signal <internal_fifo<18><8>>.
+    Found 1-bit register for signal <internal_fifo<18><7>>.
+    Found 1-bit register for signal <internal_fifo<18><6>>.
+    Found 1-bit register for signal <internal_fifo<18><5>>.
+    Found 1-bit register for signal <internal_fifo<18><4>>.
+    Found 1-bit register for signal <internal_fifo<18><3>>.
+    Found 1-bit register for signal <internal_fifo<18><2>>.
+    Found 1-bit register for signal <internal_fifo<18><1>>.
+    Found 1-bit register for signal <internal_fifo<18><0>>.
+    Found 1-bit register for signal <internal_fifo<17><31>>.
+    Found 1-bit register for signal <internal_fifo<17><30>>.
+    Found 1-bit register for signal <internal_fifo<17><29>>.
+    Found 1-bit register for signal <internal_fifo<17><28>>.
+    Found 1-bit register for signal <internal_fifo<17><27>>.
+    Found 1-bit register for signal <internal_fifo<17><26>>.
+    Found 1-bit register for signal <internal_fifo<17><25>>.
+    Found 1-bit register for signal <internal_fifo<17><24>>.
+    Found 1-bit register for signal <internal_fifo<17><23>>.
+    Found 1-bit register for signal <internal_fifo<17><22>>.
+    Found 1-bit register for signal <internal_fifo<17><21>>.
+    Found 1-bit register for signal <internal_fifo<17><20>>.
+    Found 1-bit register for signal <internal_fifo<17><19>>.
+    Found 1-bit register for signal <internal_fifo<17><18>>.
+    Found 1-bit register for signal <internal_fifo<17><17>>.
+    Found 1-bit register for signal <internal_fifo<17><16>>.
+    Found 1-bit register for signal <internal_fifo<17><15>>.
+    Found 1-bit register for signal <internal_fifo<17><14>>.
+    Found 1-bit register for signal <internal_fifo<17><13>>.
+    Found 1-bit register for signal <internal_fifo<17><12>>.
+    Found 1-bit register for signal <internal_fifo<17><11>>.
+    Found 1-bit register for signal <internal_fifo<17><10>>.
+    Found 1-bit register for signal <internal_fifo<17><9>>.
+    Found 1-bit register for signal <internal_fifo<17><8>>.
+    Found 1-bit register for signal <internal_fifo<17><7>>.
+    Found 1-bit register for signal <internal_fifo<17><6>>.
+    Found 1-bit register for signal <internal_fifo<17><5>>.
+    Found 1-bit register for signal <internal_fifo<17><4>>.
+    Found 1-bit register for signal <internal_fifo<17><3>>.
+    Found 1-bit register for signal <internal_fifo<17><2>>.
+    Found 1-bit register for signal <internal_fifo<17><1>>.
+    Found 1-bit register for signal <internal_fifo<17><0>>.
+    Found 1-bit register for signal <internal_fifo<16><31>>.
+    Found 1-bit register for signal <internal_fifo<16><30>>.
+    Found 1-bit register for signal <internal_fifo<16><29>>.
+    Found 1-bit register for signal <internal_fifo<16><28>>.
+    Found 1-bit register for signal <internal_fifo<16><27>>.
+    Found 1-bit register for signal <internal_fifo<16><26>>.
+    Found 1-bit register for signal <internal_fifo<16><25>>.
+    Found 1-bit register for signal <internal_fifo<16><24>>.
+    Found 1-bit register for signal <internal_fifo<16><23>>.
+    Found 1-bit register for signal <internal_fifo<16><22>>.
+    Found 1-bit register for signal <internal_fifo<16><21>>.
+    Found 1-bit register for signal <internal_fifo<16><20>>.
+    Found 1-bit register for signal <internal_fifo<16><19>>.
+    Found 1-bit register for signal <internal_fifo<16><18>>.
+    Found 1-bit register for signal <internal_fifo<16><17>>.
+    Found 1-bit register for signal <internal_fifo<16><16>>.
+    Found 1-bit register for signal <internal_fifo<16><15>>.
+    Found 1-bit register for signal <internal_fifo<16><14>>.
+    Found 1-bit register for signal <internal_fifo<16><13>>.
+    Found 1-bit register for signal <internal_fifo<16><12>>.
+    Found 1-bit register for signal <internal_fifo<16><11>>.
+    Found 1-bit register for signal <internal_fifo<16><10>>.
+    Found 1-bit register for signal <internal_fifo<16><9>>.
+    Found 1-bit register for signal <internal_fifo<16><8>>.
+    Found 1-bit register for signal <internal_fifo<16><7>>.
+    Found 1-bit register for signal <internal_fifo<16><6>>.
+    Found 1-bit register for signal <internal_fifo<16><5>>.
+    Found 1-bit register for signal <internal_fifo<16><4>>.
+    Found 1-bit register for signal <internal_fifo<16><3>>.
+    Found 1-bit register for signal <internal_fifo<16><2>>.
+    Found 1-bit register for signal <internal_fifo<16><1>>.
+    Found 1-bit register for signal <internal_fifo<16><0>>.
+    Found 1-bit register for signal <internal_fifo<15><31>>.
+    Found 1-bit register for signal <internal_fifo<15><30>>.
+    Found 1-bit register for signal <internal_fifo<15><29>>.
+    Found 1-bit register for signal <internal_fifo<15><28>>.
+    Found 1-bit register for signal <internal_fifo<15><27>>.
+    Found 1-bit register for signal <internal_fifo<15><26>>.
+    Found 1-bit register for signal <internal_fifo<15><25>>.
+    Found 1-bit register for signal <internal_fifo<15><24>>.
+    Found 1-bit register for signal <internal_fifo<15><23>>.
+    Found 1-bit register for signal <internal_fifo<15><22>>.
+    Found 1-bit register for signal <internal_fifo<15><21>>.
+    Found 1-bit register for signal <internal_fifo<15><20>>.
+    Found 1-bit register for signal <internal_fifo<15><19>>.
+    Found 1-bit register for signal <internal_fifo<15><18>>.
+    Found 1-bit register for signal <internal_fifo<15><17>>.
+    Found 1-bit register for signal <internal_fifo<15><16>>.
+    Found 1-bit register for signal <internal_fifo<15><15>>.
+    Found 1-bit register for signal <internal_fifo<15><14>>.
+    Found 1-bit register for signal <internal_fifo<15><13>>.
+    Found 1-bit register for signal <internal_fifo<15><12>>.
+    Found 1-bit register for signal <internal_fifo<15><11>>.
+    Found 1-bit register for signal <internal_fifo<15><10>>.
+    Found 1-bit register for signal <internal_fifo<15><9>>.
+    Found 1-bit register for signal <internal_fifo<15><8>>.
+    Found 1-bit register for signal <internal_fifo<15><7>>.
+    Found 1-bit register for signal <internal_fifo<15><6>>.
+    Found 1-bit register for signal <internal_fifo<15><5>>.
+    Found 1-bit register for signal <internal_fifo<15><4>>.
+    Found 1-bit register for signal <internal_fifo<15><3>>.
+    Found 1-bit register for signal <internal_fifo<15><2>>.
+    Found 1-bit register for signal <internal_fifo<15><1>>.
+    Found 1-bit register for signal <internal_fifo<15><0>>.
+    Found 1-bit register for signal <internal_fifo<14><31>>.
+    Found 1-bit register for signal <internal_fifo<14><30>>.
+    Found 1-bit register for signal <internal_fifo<14><29>>.
+    Found 1-bit register for signal <internal_fifo<14><28>>.
+    Found 1-bit register for signal <internal_fifo<14><27>>.
+    Found 1-bit register for signal <internal_fifo<14><26>>.
+    Found 1-bit register for signal <internal_fifo<14><25>>.
+    Found 1-bit register for signal <internal_fifo<14><24>>.
+    Found 1-bit register for signal <internal_fifo<14><23>>.
+    Found 1-bit register for signal <internal_fifo<14><22>>.
+    Found 1-bit register for signal <internal_fifo<14><21>>.
+    Found 1-bit register for signal <internal_fifo<14><20>>.
+    Found 1-bit register for signal <internal_fifo<14><19>>.
+    Found 1-bit register for signal <internal_fifo<14><18>>.
+    Found 1-bit register for signal <internal_fifo<14><17>>.
+    Found 1-bit register for signal <internal_fifo<14><16>>.
+    Found 1-bit register for signal <internal_fifo<14><15>>.
+    Found 1-bit register for signal <internal_fifo<14><14>>.
+    Found 1-bit register for signal <internal_fifo<14><13>>.
+    Found 1-bit register for signal <internal_fifo<14><12>>.
+    Found 1-bit register for signal <internal_fifo<14><11>>.
+    Found 1-bit register for signal <internal_fifo<14><10>>.
+    Found 1-bit register for signal <internal_fifo<14><9>>.
+    Found 1-bit register for signal <internal_fifo<14><8>>.
+    Found 1-bit register for signal <internal_fifo<14><7>>.
+    Found 1-bit register for signal <internal_fifo<14><6>>.
+    Found 1-bit register for signal <internal_fifo<14><5>>.
+    Found 1-bit register for signal <internal_fifo<14><4>>.
+    Found 1-bit register for signal <internal_fifo<14><3>>.
+    Found 1-bit register for signal <internal_fifo<14><2>>.
+    Found 1-bit register for signal <internal_fifo<14><1>>.
+    Found 1-bit register for signal <internal_fifo<14><0>>.
+    Found 1-bit register for signal <internal_fifo<13><31>>.
+    Found 1-bit register for signal <internal_fifo<13><30>>.
+    Found 1-bit register for signal <internal_fifo<13><29>>.
+    Found 1-bit register for signal <internal_fifo<13><28>>.
+    Found 1-bit register for signal <internal_fifo<13><27>>.
+    Found 1-bit register for signal <internal_fifo<13><26>>.
+    Found 1-bit register for signal <internal_fifo<13><25>>.
+    Found 1-bit register for signal <internal_fifo<13><24>>.
+    Found 1-bit register for signal <internal_fifo<13><23>>.
+    Found 1-bit register for signal <internal_fifo<13><22>>.
+    Found 1-bit register for signal <internal_fifo<13><21>>.
+    Found 1-bit register for signal <internal_fifo<13><20>>.
+    Found 1-bit register for signal <internal_fifo<13><19>>.
+    Found 1-bit register for signal <internal_fifo<13><18>>.
+    Found 1-bit register for signal <internal_fifo<13><17>>.
+    Found 1-bit register for signal <internal_fifo<13><16>>.
+    Found 1-bit register for signal <internal_fifo<13><15>>.
+    Found 1-bit register for signal <internal_fifo<13><14>>.
+    Found 1-bit register for signal <internal_fifo<13><13>>.
+    Found 1-bit register for signal <internal_fifo<13><12>>.
+    Found 1-bit register for signal <internal_fifo<13><11>>.
+    Found 1-bit register for signal <internal_fifo<13><10>>.
+    Found 1-bit register for signal <internal_fifo<13><9>>.
+    Found 1-bit register for signal <internal_fifo<13><8>>.
+    Found 1-bit register for signal <internal_fifo<13><7>>.
+    Found 1-bit register for signal <internal_fifo<13><6>>.
+    Found 1-bit register for signal <internal_fifo<13><5>>.
+    Found 1-bit register for signal <internal_fifo<13><4>>.
+    Found 1-bit register for signal <internal_fifo<13><3>>.
+    Found 1-bit register for signal <internal_fifo<13><2>>.
+    Found 1-bit register for signal <internal_fifo<13><1>>.
+    Found 1-bit register for signal <internal_fifo<13><0>>.
+    Found 1-bit register for signal <internal_fifo<12><31>>.
+    Found 1-bit register for signal <internal_fifo<12><30>>.
+    Found 1-bit register for signal <internal_fifo<12><29>>.
+    Found 1-bit register for signal <internal_fifo<12><28>>.
+    Found 1-bit register for signal <internal_fifo<12><27>>.
+    Found 1-bit register for signal <internal_fifo<12><26>>.
+    Found 1-bit register for signal <internal_fifo<12><25>>.
+    Found 1-bit register for signal <internal_fifo<12><24>>.
+    Found 1-bit register for signal <internal_fifo<12><23>>.
+    Found 1-bit register for signal <internal_fifo<12><22>>.
+    Found 1-bit register for signal <internal_fifo<12><21>>.
+    Found 1-bit register for signal <internal_fifo<12><20>>.
+    Found 1-bit register for signal <internal_fifo<12><19>>.
+    Found 1-bit register for signal <internal_fifo<12><18>>.
+    Found 1-bit register for signal <internal_fifo<12><17>>.
+    Found 1-bit register for signal <internal_fifo<12><16>>.
+    Found 1-bit register for signal <internal_fifo<12><15>>.
+    Found 1-bit register for signal <internal_fifo<12><14>>.
+    Found 1-bit register for signal <internal_fifo<12><13>>.
+    Found 1-bit register for signal <internal_fifo<12><12>>.
+    Found 1-bit register for signal <internal_fifo<12><11>>.
+    Found 1-bit register for signal <internal_fifo<12><10>>.
+    Found 1-bit register for signal <internal_fifo<12><9>>.
+    Found 1-bit register for signal <internal_fifo<12><8>>.
+    Found 1-bit register for signal <internal_fifo<12><7>>.
+    Found 1-bit register for signal <internal_fifo<12><6>>.
+    Found 1-bit register for signal <internal_fifo<12><5>>.
+    Found 1-bit register for signal <internal_fifo<12><4>>.
+    Found 1-bit register for signal <internal_fifo<12><3>>.
+    Found 1-bit register for signal <internal_fifo<12><2>>.
+    Found 1-bit register for signal <internal_fifo<12><1>>.
+    Found 1-bit register for signal <internal_fifo<12><0>>.
+    Found 1-bit register for signal <internal_fifo<11><31>>.
+    Found 1-bit register for signal <internal_fifo<11><30>>.
+    Found 1-bit register for signal <internal_fifo<11><29>>.
+    Found 1-bit register for signal <internal_fifo<11><28>>.
+    Found 1-bit register for signal <internal_fifo<11><27>>.
+    Found 1-bit register for signal <internal_fifo<11><26>>.
+    Found 1-bit register for signal <internal_fifo<11><25>>.
+    Found 1-bit register for signal <internal_fifo<11><24>>.
+    Found 1-bit register for signal <internal_fifo<11><23>>.
+    Found 1-bit register for signal <internal_fifo<11><22>>.
+    Found 1-bit register for signal <internal_fifo<11><21>>.
+    Found 1-bit register for signal <internal_fifo<11><20>>.
+    Found 1-bit register for signal <internal_fifo<11><19>>.
+    Found 1-bit register for signal <internal_fifo<11><18>>.
+    Found 1-bit register for signal <internal_fifo<11><17>>.
+    Found 1-bit register for signal <internal_fifo<11><16>>.
+    Found 1-bit register for signal <internal_fifo<11><15>>.
+    Found 1-bit register for signal <internal_fifo<11><14>>.
+    Found 1-bit register for signal <internal_fifo<11><13>>.
+    Found 1-bit register for signal <internal_fifo<11><12>>.
+    Found 1-bit register for signal <internal_fifo<11><11>>.
+    Found 1-bit register for signal <internal_fifo<11><10>>.
+    Found 1-bit register for signal <internal_fifo<11><9>>.
+    Found 1-bit register for signal <internal_fifo<11><8>>.
+    Found 1-bit register for signal <internal_fifo<11><7>>.
+    Found 1-bit register for signal <internal_fifo<11><6>>.
+    Found 1-bit register for signal <internal_fifo<11><5>>.
+    Found 1-bit register for signal <internal_fifo<11><4>>.
+    Found 1-bit register for signal <internal_fifo<11><3>>.
+    Found 1-bit register for signal <internal_fifo<11><2>>.
+    Found 1-bit register for signal <internal_fifo<11><1>>.
+    Found 1-bit register for signal <internal_fifo<11><0>>.
+    Found 1-bit register for signal <internal_fifo<10><31>>.
+    Found 1-bit register for signal <internal_fifo<10><30>>.
+    Found 1-bit register for signal <internal_fifo<10><29>>.
+    Found 1-bit register for signal <internal_fifo<10><28>>.
+    Found 1-bit register for signal <internal_fifo<10><27>>.
+    Found 1-bit register for signal <internal_fifo<10><26>>.
+    Found 1-bit register for signal <internal_fifo<10><25>>.
+    Found 1-bit register for signal <internal_fifo<10><24>>.
+    Found 1-bit register for signal <internal_fifo<10><23>>.
+    Found 1-bit register for signal <internal_fifo<10><22>>.
+    Found 1-bit register for signal <internal_fifo<10><21>>.
+    Found 1-bit register for signal <internal_fifo<10><20>>.
+    Found 1-bit register for signal <internal_fifo<10><19>>.
+    Found 1-bit register for signal <internal_fifo<10><18>>.
+    Found 1-bit register for signal <internal_fifo<10><17>>.
+    Found 1-bit register for signal <internal_fifo<10><16>>.
+    Found 1-bit register for signal <internal_fifo<10><15>>.
+    Found 1-bit register for signal <internal_fifo<10><14>>.
+    Found 1-bit register for signal <internal_fifo<10><13>>.
+    Found 1-bit register for signal <internal_fifo<10><12>>.
+    Found 1-bit register for signal <internal_fifo<10><11>>.
+    Found 1-bit register for signal <internal_fifo<10><10>>.
+    Found 1-bit register for signal <internal_fifo<10><9>>.
+    Found 1-bit register for signal <internal_fifo<10><8>>.
+    Found 1-bit register for signal <internal_fifo<10><7>>.
+    Found 1-bit register for signal <internal_fifo<10><6>>.
+    Found 1-bit register for signal <internal_fifo<10><5>>.
+    Found 1-bit register for signal <internal_fifo<10><4>>.
+    Found 1-bit register for signal <internal_fifo<10><3>>.
+    Found 1-bit register for signal <internal_fifo<10><2>>.
+    Found 1-bit register for signal <internal_fifo<10><1>>.
+    Found 1-bit register for signal <internal_fifo<10><0>>.
+    Found 6-bit subtractor for signal <internal_fifo_counter[5]_GND_5_o_sub_49_OUT> created at line 92.
+    Found 6-bit adder for signal <internal_fifo_counter[5]_GND_5_o_add_43_OUT> created at line 70.
+    Found 32-bit 40-to-1 multiplexer for signal <internal_fifo_counter[5]_X_4_o_wide_mux_49_OUT> created at line 92.
+    Found 21-bit comparator equal for signal <n0003> created at line 68
+    Summary:
+	inferred   2 Adder/Subtractor(s).
+	inferred 1365 D-type flip-flop(s).
+	inferred   1 Comparator(s).
+	inferred 293 Multiplexer(s).
+Unit <Output_Stage> synthesized.
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# Adders/Subtractors                                   : 3
+ 21-bit adder                                          : 1
+ 6-bit addsub                                          : 1
+ 6-bit subtractor                                      : 1
+# Registers                                            : 361
+ 1-bit register                                        : 324
+ 21-bit register                                       : 3
+ 32-bit register                                       : 32
+ 4-bit register                                        : 1
+ 6-bit register                                        : 1
+# Comparators                                          : 2
+ 21-bit comparator equal                               : 1
+ 21-bit comparator lessequal                           : 1
+# Multiplexers                                         : 311
+ 1-bit 2-to-1 multiplexer                              : 292
+ 21-bit 2-to-1 multiplexer                             : 8
+ 32-bit 2-to-1 multiplexer                             : 10
+ 32-bit 40-to-1 multiplexer                            : 1
+
+=========================================================================
+INFO:Xst:1767 - HDL ADVISOR - Resource sharing has identified that some arithmetic operations in this design can share the same physical resources for reduced device utilization. For improved clock frequency you may try to disable resource sharing.
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+INFO:Xst:2261 - The FF/Latch <be_1> in Unit <u2> is equivalent to the following 2 FFs/Latches, which will be removed : <be_2> <be_3> 
+WARNING:Xst:1710 - FF/Latch <be_0> (without init value) has a constant value of 1 in block <u2>. This FF/Latch will be trimmed during the optimization process.
+
+Synthesizing (advanced) Unit <Output_Stage>.
+The following registers are absorbed into counter <internal_fifo_counter>: 1 register on signal <internal_fifo_counter>.
+Unit <Output_Stage> synthesized (advanced).
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# Adders/Subtractors                                   : 2
+ 21-bit adder                                          : 1
+ 6-bit subtractor                                      : 1
+# Counters                                             : 1
+ 6-bit updown counter                                  : 1
+# Registers                                            : 1415
+ Flip-Flops                                            : 1415
+# Comparators                                          : 2
+ 21-bit comparator equal                               : 1
+ 21-bit comparator lessequal                           : 1
+# Multiplexers                                         : 342
+ 1-bit 2-to-1 multiplexer                              : 292
+ 1-bit 40-to-1 multiplexer                             : 32
+ 21-bit 2-to-1 multiplexer                             : 8
+ 32-bit 2-to-1 multiplexer                             : 10
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+WARNING:Xst:1710 - FF/Latch <be_0> (without init value) has a constant value of 1 in block <Output_Stage>. This FF/Latch will be trimmed during the optimization process.
+INFO:Xst:2261 - The FF/Latch <be_1> in Unit <Output_Stage> is equivalent to the following 2 FFs/Latches, which will be removed : <be_2> <be_3> 
+
+Optimizing unit <ADV_Capture> ...
+
+Optimizing unit <Input_Stage> ...
+
+Optimizing unit <Output_Stage> ...
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block ADV_Capture, actual ratio is 41.
+FlipFlop u2/internal_fifo_counter_0 has been replicated 17 time(s)
+FlipFlop u2/internal_fifo_counter_1 has been replicated 17 time(s)
+FlipFlop u2/internal_fifo_counter_2 has been replicated 3 time(s)
+FlipFlop u2/internal_fifo_counter_3 has been replicated 3 time(s)
+FlipFlop u2/internal_fifo_counter_4 has been replicated 1 time(s)
+FlipFlop u2/internal_fifo_counter_5 has been replicated 1 time(s)
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 1460
+ Flip-Flops                                            : 1460
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Design Summary                             *
+=========================================================================
+
+Top Level Output File Name         : ADV_Capture.ngc
+
+Primitive and Black Box Usage:
+------------------------------
+# BELS                             : 2412
+#      GND                         : 1
+#      INV                         : 5
+#      LUT1                        : 20
+#      LUT2                        : 13
+#      LUT3                        : 210
+#      LUT4                        : 283
+#      LUT5                        : 483
+#      LUT6                        : 1246
+#      MUXCY                       : 33
+#      MUXF7                       : 64
+#      MUXF8                       : 32
+#      VCC                         : 1
+#      XORCY                       : 21
+# FlipFlops/Latches                : 1460
+#      FDC                         : 280
+#      FDCE                        : 152
+#      FDE                         : 962
+#      FDP                         : 33
+#      FDPE                        : 33
+# Clock Buffers                    : 2
+#      BUFG                        : 1
+#      BUFGP                       : 1
+# IO Buffers                       : 58
+#      IBUF                        : 20
+#      IBUFG                       : 1
+#      OBUF                        : 37
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 6slx9tqg144-2 
+
+
+Slice Logic Utilization: 
+ Number of Slice Registers:            1460  out of  11440    12%  
+ Number of Slice LUTs:                 2260  out of   5720    39%  
+    Number used as Logic:              2260  out of   5720    39%  
+
+Slice Logic Distribution: 
+ Number of LUT Flip Flop pairs used:   2317
+   Number with an unused Flip Flop:     857  out of   2317    36%  
+   Number with an unused LUT:            57  out of   2317     2%  
+   Number of fully used LUT-FF pairs:  1403  out of   2317    60%  
+   Number of unique control sets:        46
+
+IO Utilization: 
+ Number of IOs:                          60
+ Number of bonded IOBs:                  59  out of    102    57%  
+
+Specific Feature Utilization:
+ Number of BUFG/BUFGCTRLs:                2  out of     16    12%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+Timing Report
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------+------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)  | Load  |
+-----------------------------------+------------------------+-------+
+LLC                                | BUFGP                  | 56    |
+CLK_I                              | IBUFG+BUFG             | 1404  |
+-----------------------------------+------------------------+-------+
+
+Asynchronous Control Signals Information:
+----------------------------------------
+No asynchronous control signals found in this design
+
+Timing Summary:
+---------------
+Speed Grade: -2
+
+   Minimum period: 6.815ns (Maximum Frequency: 146.745MHz)
+   Minimum input arrival time before clock: 6.762ns
+   Maximum output required time after clock: 5.865ns
+   Maximum combinational path delay: No path found
+
+Timing Details:
+---------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'LLC'
+  Clock period: 6.344ns (frequency: 157.629MHz)
+  Total number of paths / destination ports: 4647 / 76
+-------------------------------------------------------------------------
+Delay:               6.344ns (Levels of Logic = 4)
+  Source:            u1/counter_13 (FF)
+  Destination:       u1/data_31 (FF)
+  Source Clock:      LLC rising
+  Destination Clock: LLC rising
+
+  Data Path: u1/counter_13 to u1/data_31
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDCE:C->Q             6   0.525   1.331  u1/counter_13 (u1/counter_13)
+     LUT6:I0->O            1   0.254   0.910  u1/counter[20]_GND_3_o_equal_3_o<20>3 (u1/counter[20]_GND_3_o_equal_3_o<20>2)
+     LUT6:I3->O           14   0.235   1.127  u1/counter[20]_GND_3_o_equal_3_o<20>4 (u1/counter[20]_GND_3_o_equal_3_o)
+     LUT3:I2->O           24   0.254   1.380  u1/_n00811 (u1/_n0081)
+     LUT6:I5->O            1   0.254   0.000  u1/Mmux_data[31]_GND_3_o_mux_28_OUT521 (u1/data[31]_GND_3_o_mux_28_OUT<3>)
+     FDP:D                     0.074          u1/data_3
+    ----------------------------------------
+    Total                      6.344ns (1.596ns logic, 4.748ns route)
+                                       (25.2% logic, 74.8% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'CLK_I'
+  Clock period: 6.815ns (frequency: 146.745MHz)
+  Total number of paths / destination ports: 75558 / 2507
+-------------------------------------------------------------------------
+Delay:               6.815ns (Levels of Logic = 9)
+  Source:            u2/counter_2_2 (FF)
+  Destination:       u2/data_31 (FF)
+  Source Clock:      CLK_I rising
+  Destination Clock: CLK_I rising
+
+  Data Path: u2/counter_2_2 to u2/data_31
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDC:C->Q              1   0.525   1.137  u2/counter_2_2 (u2/counter_2_2)
+     LUT6:I0->O            1   0.254   0.000  u2/Mcompar_n0003_lut<0> (u2/Mcompar_n0003_lut<0>)
+     MUXCY:S->O            1   0.215   0.000  u2/Mcompar_n0003_cy<0> (u2/Mcompar_n0003_cy<0>)
+     MUXCY:CI->O           1   0.023   0.000  u2/Mcompar_n0003_cy<1> (u2/Mcompar_n0003_cy<1>)
+     MUXCY:CI->O           1   0.023   0.000  u2/Mcompar_n0003_cy<2> (u2/Mcompar_n0003_cy<2>)
+     MUXCY:CI->O           1   0.023   0.000  u2/Mcompar_n0003_cy<3> (u2/Mcompar_n0003_cy<3>)
+     MUXCY:CI->O           1   0.023   0.000  u2/Mcompar_n0003_cy<4> (u2/Mcompar_n0003_cy<4>)
+     MUXCY:CI->O           1   0.023   0.000  u2/Mcompar_n0003_cy<5> (u2/Mcompar_n0003_cy<5>)
+     MUXCY:CI->O         546   0.023   2.468  u2/Mcompar_n0003_cy<6> (u2/counter_1[20]_counter_2[20]_not_equal_1_o_inv)
+     INV:I->O             32   0.255   1.519  u2/Mcompar_n0003_cy<6>_inv_INV_0 (u2/Mcompar_n0003_cy<6>_inv)
+     FDPE:CE                   0.302          u2/data_0
+    ----------------------------------------
+    Total                      6.815ns (1.691ns logic, 5.124ns route)
+                                       (24.8% logic, 75.2% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'LLC'
+  Total number of paths / destination ports: 245 / 132
+-------------------------------------------------------------------------
+Offset:              6.217ns (Levels of Logic = 2)
+  Source:            rst_n (PAD)
+  Destination:       u1/data_31 (FF)
+  Destination Clock: LLC rising
+
+  Data Path: rst_n to u1/data_31
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            44   1.328   1.720  rst_n_IBUF (rst_n_IBUF)
+     INV:I->O            498   0.255   2.455  u1/rst_n_inv1_INV_0 (u1/rst_n_inv)
+     FDP:PRE                   0.459          u1/data_0
+    ----------------------------------------
+    Total                      6.217ns (2.042ns logic, 4.175ns route)
+                                       (32.8% logic, 67.2% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'CLK_I'
+  Total number of paths / destination ports: 1774 / 1774
+-------------------------------------------------------------------------
+Offset:              6.762ns (Levels of Logic = 3)
+  Source:            txe_n (PAD)
+  Destination:       u2/internal_fifo_counter_5 (FF)
+  Destination Clock: CLK_I rising
+
+  Data Path: txe_n to u2/internal_fifo_counter_5
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O           243   1.328   2.657  txe_n_IBUF (txe_n_IBUF)
+     LUT3:I0->O            1   0.235   0.000  u2/_n5919_inv1_lut (u2/_n5919_inv1_lut)
+     MUXCY:S->O           48   0.454   1.787  u2/_n5919_inv1_cy (u2/_n5919_inv)
+     FDCE:CE                   0.302          u2/internal_fifo_counter_0
+    ----------------------------------------
+    Total                      6.762ns (2.319ns logic, 4.443ns route)
+                                       (34.3% logic, 65.7% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'CLK_I'
+  Total number of paths / destination ports: 36 / 36
+-------------------------------------------------------------------------
+Offset:              5.865ns (Levels of Logic = 1)
+  Source:            u2/wr_n (FF)
+  Destination:       wr_n (PAD)
+  Source Clock:      CLK_I rising
+
+  Data Path: u2/wr_n to wr_n
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDP:C->Q            244   0.525   2.428  u2/wr_n (u2/wr_n)
+     OBUF:I->O                 2.912          wr_n_OBUF (wr_n)
+    ----------------------------------------
+    Total                      5.865ns (3.437ns logic, 2.428ns route)
+                                       (58.6% logic, 41.4% route)
+
+=========================================================================
+
+Cross Clock Domains Report:
+--------------------------
+
+Clock to Setup on destination clock CLK_I
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+CLK_I          |    6.815|         |         |         |
+LLC            |    3.476|         |         |         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock LLC
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+LLC            |    6.344|         |         |         |
+---------------+---------+---------+---------+---------+
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 10.00 secs
+Total CPU time to Xst completion: 9.91 secs
+ 
+--> 
+
+
+Total memory usage is 509084 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :    3 (   0 filtered)
+Number of infos    :    3 (   0 filtered)
+

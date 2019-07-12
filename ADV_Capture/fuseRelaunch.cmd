@@ -1,0 +1,1 @@
+-intstyle "ise" -incremental -lib "unisims_ver" -lib "unimacro_ver" -lib "xilinxcorelib_ver" -lib "secureip" -o "/home/kkoutsianopoulos/Documents/ise_projects/ADV_Capture_1/ADV_Capture/ADV_Capture_test_isim_beh.exe" -prj "/home/kkoutsianopoulos/Documents/ise_projects/ADV_Capture_1/ADV_Capture/ADV_Capture_test_beh.prj" "work.ADV_Capture_test" "work.glbl" 
